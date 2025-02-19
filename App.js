@@ -8,7 +8,9 @@ import {
   Image
 } from "react-native";
 import DuaCard from "./component/DuaCard";
+import EventCard from "./component/EventCard";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import NameCard from "./component/NameCard";
 
 export default function App() {
   return (
@@ -18,28 +20,16 @@ export default function App() {
         <StatusBar style="auto" />
       </View>
      
-        <TouchableOpacity style={{ flexDirection: "row",width: '100%',padding: 5,justifyContent:'center',alignItems:'center' }}>
-          <Image source={require('./assets/waste.png')} style={{width: 40, height: 40}} />
-          <Text style={{fontSize:20,fontWeight:'bold'}}> Ramadan Start in 12 Days </Text>
-        </TouchableOpacity>
+       <EventCard  eventName={"Eid ul Fitr"} daysRemaining={43} eventImage={require('./assets/moon.png')} />
    
 
-      <View style={{ backgroundColor:'green',padding:5,margin:10} }>
-        <TouchableOpacity style={{ flexDirection: "row", justifyContent: 'space-between',width: '100%',padding: 5, }}>
-          <Text>AsmaulHusna </Text>
-          <View style={{ backgroundColor:'#209A8F',padding:5,borderRadius:10 }}>
-          <Text  style={{fontSize:20,fontWeight:'bold',color:'white'}}> 2 </Text>
-          </View>
-          
-          <Text> More.. </Text>
-        </TouchableOpacity>
-        <View style={{ justifyContent:'center',alignItems:'center',padding:5 }}>
-        <Text style={{fontSize:48,fontWeight:'bold'}}>الرحمن</Text>
-        <Text style={{fontSize:16,fontWeight:'heavy'}}>Ar Rahman</Text>
-        <Text style={{fontSize:16,fontWeight:'heavy'}}> আর রাহমান</Text>
-        <Text style={{fontSize:20,fontWeight:'heavy',textAlign:'center'}}>পরম করুণাময়, সবচেয়ে দয়ালু, কল্যাণময়</Text>
-        </View>
-      </View>
+     <NameCard
+            title={"Asmaul Husna"}
+            count={2}
+            arabic={"الرحمن"}
+            english={"Ar Rahman"}
+            bangla={"আর রাহমান"}
+            meaning={"পরম করুণাময়, সবচেয়ে দয়ালু, কল্যাণময়"}/>
 
     
 
@@ -108,11 +98,13 @@ export default function App() {
        </TouchableOpacity>
        </View>
       
-      <View style={styles.containerItem1}>
-        <TouchableOpacity>
-          <Text>Item 2 </Text>
+      
+        <TouchableOpacity style={{ justifyContent:'center',alignContent:'center',alignItems:'center',padding:10,margin:10,backgroundColor:'#FDE1A7',borderColor:'black',borderWidth:1,borderRadius:35 }}>
+         <Text style={{fontSize:16, fontWeight:'bold'}}> Today's Qoute </Text>
+          <Text> 'তোমাদের যে কোন ব্যক্তি যে কোন অন্যায় কাজ দেখবে সে যেন তা বল প্রয়োগে বাধা প্রদান করে। এভাবে সম্ভব না হলে মুখে বাধা প্রদান করবে। সম্ভব না হলে সে অন্যায়কে ঘৃণা করবে। আর অন্তরে ঘৃণা করে বাধা প্রদান করা কাজটি সবচেয়ে দুর্বল ঈমানের পরিচয়’ </Text>
+          <Text style={{fontSize:12, fontWeight:'bold'}}> সহিহ বুখারী, হাদিস নং ৬০৮৬ </Text>
         </TouchableOpacity>
-      </View>
+     
       <View style={styles.containerItem1}>
         <TouchableOpacity>
           <Text>Item 3 </Text>
