@@ -45,7 +45,6 @@ export default function DuaCard({ title, arabic,bangla,english,meaning,reference
                 <TouchableOpacity style={{ flexDirection: "row" }}>
                 <Text> More. </Text>
                     <MaterialCommunityIcons name="arrow-right" size={20} color="black" />
-                    <MaterialCommunityIcons name="arrow-right" size={20} color="black" />
                 </TouchableOpacity>
 
                </View>
@@ -89,7 +88,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "row",
         padding: 5,
-        backgroundColor: "pink",
+        backgroundColor: "lightblue",
         justifyContent: "space-between",
         width: "100%",
       },

@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 export default function NameCard({ title,count, arabic,bangla,english,meaning,bgColor, onPress, date, iconName, iconSize, amount,category,backgroundColor='#7FC56C',
     iconColor = 'green' }) {
     return (
-        <View style={{ backgroundColor:'green',padding:5,margin:10} }>
+        <View style={{ backgroundColor:'tomato',padding:5,margin:10} }>
                <TouchableOpacity style={{ flexDirection: "row", justifyContent: 'space-between',width: '100%',padding: 5, }}>
                  <Text>{title} </Text>
                  {count && <View style={{ backgroundColor:'#209A8F',padding:5,borderRadius:10 }}>

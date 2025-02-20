@@ -11,6 +11,12 @@ import DuaCard from "./component/DuaCard";
 import EventCard from "./component/EventCard";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import NameCard from "./component/NameCard";
+import MenuCard from "./component/MenuCard";
+import EventList from "./component/EventList";
+import QuoteCard from "./component/QuoteCard";
+import TodayCard from "./component/TodayCard";
+import RamadanTime from "./component/RamadanTime";
+import SalahTime from "./component/SalahTime";
 
 export default function App() {
   return (
@@ -30,35 +36,32 @@ export default function App() {
             english={"Ar Rahman"}
             bangla={"আর রাহমান"}
             meaning={"পরম করুণাময়, সবচেয়ে দয়ালু, কল্যাণময়"}/>
-
+<Text style={{fontSize:16 , fontWeight:'bold', paddingLeft:10}}> Five Pillar of Islam </Text>
     
 
-      <ScrollView  horizontal showsHorizontalScrollIndicator={false} style={{ flexDirection: "row",padding: 5, }}>
-        <TouchableOpacity style={{  justifyContent:'center',alignContent:'center',alignItems:'center',padding:10,margin:5,backgroundColor:'tomato' }}>
-        <Image source={require('./assets/pray.png')} style={{width: 50, height: 50}} />
-          
-          <Text style={{ fontSize:16, fontWeight:'bold'}}> Salah </Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={{  justifyContent:'center',alignContent:'center',alignItems:'center',padding:10,margin:5,backgroundColor:'tomato' }}>
-        <Image source={require('./assets/kabaa.png')} style={{width: 50, height: 50}} />
-          
-          <Text style={{ fontSize:16, fontWeight:'bold'}}> Hazz </Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={{  justifyContent:'center',alignContent:'center',alignItems:'center',padding:10,margin:5,backgroundColor:'tomato' }}>
-        <Image source={require('./assets/moon.png')} style={{width: 50, height: 50}} />
-          
-          <Text style={{ fontSize:16, fontWeight:'bold'}}> Shaom </Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={{  justifyContent:'center',alignContent:'center',alignItems:'center',padding:10,margin:5,backgroundColor:'tomato' }}>
-        <Image source={require('./assets/iftar.png')} style={{width: 50, height: 50}} />
-          
-          <Text style={{ fontSize:16, fontWeight:'bold'}}> Jakat </Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={{  justifyContent:'center',alignContent:'center',alignItems:'center',padding:10,margin:5,backgroundColor:'tomato' }}>
-        <Image source={require('./assets/bismillah.png')} style={{width: 50, height: 50}} />
-          
-          <Text style={{ fontSize:16, fontWeight:'bold'}}> Kalima </Text>
-        </TouchableOpacity>
+      <ScrollView  horizontal showsHorizontalScrollIndicator={false} style={{ flexDirection: "row" }}>
+        <MenuCard 
+        menuImage={require('./assets/pray.png')}
+        menuName={"Salah"}
+        />
+        <MenuCard
+        menuImage={require('./assets/kabaa.png')}
+        menuName={"Hajj"}
+        />
+        <MenuCard
+        menuImage={require('./assets/alms.png')}
+        menuName={"Zakat"}
+        />
+        <MenuCard
+        menuImage={require('./assets/bismillah.png')}
+        menuName={"Iman"}
+        />
+        <MenuCard
+        menuImage={require('./assets/iftar.png')}
+        menuName={"Siam"}
+        />
+       
+        
       </ScrollView>
       
       <DuaCard
@@ -74,47 +77,60 @@ export default function App() {
             onPress={() => console.log("DuaCard")}
           />
      
-      <View style={{justifyContent:'flex-start',padding:10,backgroundColor:'tomato',marginLeft:10,marginRight:10}}>
-       <Text style={{fontSize:20,fontWeight:'bold'}} >Upcoming Event </Text>
-       <View style={{flexDirection:'row',padding:5,flex:1}}>
-        <View style={{ backgroundColor:'lightblue',borderRadius:35,flex:.2,height:80,padding:5,justifyContent:'center',alignItems:'center' }}>
-        <Text style={{textAlign:'center',fontSize:14,fontWeight:'bold'
-        }}> 15 </Text>
-        <Text style={{textAlign:'center',paddingLeft:5,fontSize:16,fontWeight:'bold'
-        }}>Feb </Text>
-        </View>
-        <View style={{ padding:15,flex:.8 }}>
-        <Text style={{paddingLeft:5,fontSize:16,fontWeight:'bold'
-        }}>Start of Ramadan </Text>
-        <Text style={{paddingLeft:5,fontSize:14,fontWeight:'bold'}}>
-          2 March  </Text>
-          <Text style={{paddingLeft:5,fontSize:16,fontWeight:'condensedBold'}}>
-          13 Days Remaining  </Text>
-        </View> 
-      </View>
+     <EventList listName={"Upcoming Event" } eventName={"Eid ul Fitr"} daysRemaining={43} day={5} month={"April"} />
       
-      <TouchableOpacity style={{justifyContent:'center',alignItems:'center'}}>
-          <Text style={{ color:'blue',fontWeight:'bold'}}>View All</Text>
-       </TouchableOpacity>
-       </View>
-      
-      
-        <TouchableOpacity style={{ justifyContent:'center',alignContent:'center',alignItems:'center',padding:10,margin:10,backgroundColor:'#FDE1A7',borderColor:'black',borderWidth:1,borderRadius:35 }}>
-         <Text style={{fontSize:16, fontWeight:'bold'}}> Today's Qoute </Text>
-          <Text> 'তোমাদের যে কোন ব্যক্তি যে কোন অন্যায় কাজ দেখবে সে যেন তা বল প্রয়োগে বাধা প্রদান করে। এভাবে সম্ভব না হলে মুখে বাধা প্রদান করবে। সম্ভব না হলে সে অন্যায়কে ঘৃণা করবে। আর অন্তরে ঘৃণা করে বাধা প্রদান করা কাজটি সবচেয়ে দুর্বল ঈমানের পরিচয়’ </Text>
-          <Text style={{fontSize:12, fontWeight:'bold'}}> সহিহ বুখারী, হাদিস নং ৬০৮৬ </Text>
-        </TouchableOpacity>
+     <QuoteCard QuotesTitle={"Todays Hadith"} 
+                Quote={" তোমাদের যে কোন ব্যক্তি যে কোন অন্যায় কাজ দেখবে সে যেন তা বল প্রয়োগে বাধা প্রদান করে। এভাবে সম্ভব না হলে মুখে বাধা প্রদান করবে। সম্ভব না হলে সে অন্যায়কে ঘৃণা করবে। আর অন্তরে ঘৃণা করে বাধা প্রদান করা কাজটি সবচেয়ে দুর্বল ঈমানের পরিচয় "}
+                Reference={"সহিহ বুখারী, হাদিস নং ৬০৮৬"} />
+                
      
-      <View style={styles.containerItem1}>
-        <TouchableOpacity>
-          <Text>Item 3 </Text>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.containerItem1}>
-        <TouchableOpacity>
-          <Text>Item 1 </Text>
-        </TouchableOpacity>
-      </View>
+        <TodayCard
+          sunrise={"6:05 AM"}
+          sunset={"6:05 PM"}
+          english={"Friday, 21 February 2025"}
+          arabic={"20 Shaban 1446 Hijri"}
+          bangla={"শুক্রবার, ১২ ফাল্গুন, ১৪৩১ বঙ্গাব্দ"}
+        />
+
+        <RamadanTime
+        sunrise={"6:05 AM"}
+        sunset={"6:05 PM"}
+          iftar={"5:50 PM"}
+          sahri={"5:15 AM"}/>
+
+    
+      
+    
+      <SalahTime
+        image={require("./assets/day-and-night.png")}
+        name={"Fajar"}
+        time={"5:30 AM"}
+        willEndIn={"1h 35m"}
+      />
+      <SalahTime
+        image={require("./assets/rising-sun.png")}
+        name={"Dhuhar"}
+        time={"5:30 AM"}
+        willEndIn={"1h 35m"}
+      />
+      <SalahTime
+        image={require("./assets/desert.png")}
+        name={"Asar"}
+        time={"5:30 AM"}
+        willEndIn={"1h 35m"}
+      />
+      <SalahTime
+        image={require("./assets/day-and-night2.png")}
+        name={"Magrib"}
+        time={"5:30 AM"}
+        willEndIn={"1h 35m"}
+      />
+      <SalahTime
+        image={require("./assets/half-moon.png")}
+        name={"Isha"}
+        time={"5:30 AM"}
+        willEndIn={"1h 35m"}
+      />
       <View style={styles.containerItem4}>
         <TouchableOpacity>
           <Text>Item 8 </Text>
