@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Image, Text, TouchableOpacity } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-export default function MenuCard({
+export default function MenuCard2({
   menuName,
   daysRemaining,
   menuImage,
@@ -16,15 +16,15 @@ export default function MenuCard({
         alignItems: "center",
         padding: 10,
         margin: 5,
-        backgroundColor: "tomato",
-        borderRadius: 10,
         overflow: "hidden",
+        
+       
       }}
       onPress={onPress}
     >
       <Image
         source={menuImage}
-        style={{ width: 50, height: 50 }}
+        style={{ width: 60, height: 60 ,borderRadius:35,borderWidth:3,borderColor:'white',resizeMode:'cover' }}
       />
 
       <Text style={{ fontSize: 16, fontWeight: "bold" }}> {menuName} </Text>

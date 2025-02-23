@@ -10,19 +10,19 @@ export default function SalahTime({
   return (
     <View style={{ flexDirection: "row", justifyContent: "center", alignContent: "center",alignItems: "center",padding:5 }}>
        
-    <View style={{flex:.2}}> <Image
+    <View style={{flex:.15}}> <Image
        source={image}
-       style={{ width: 45, height: 45 }}
+       style={{ width: 35, height: 35 }}
      />
      </View>
-     <View  style={{flex:.2}}>
+     <View  style={{flex:.15}}>
      <Text> {name}  </Text>
      </View>
-     <View  style={{flex:.4}}>
-     <Text> Will ends in {willEndIn} </Text>
+     <View  style={{flex:.5, justifyContent:'center',alignItems:'center'}}>
+     <Text style={{textAlign:'center'}}> Will ends in {willEndIn} </Text>
      </View>
-     <View  style={{flex:.2}}>
-     <Text> {time} </Text>
+     <View  style={{flex:.2,justifyContent:'center',alignItems:'center'}}>
+     <Text style={{textAlign:'center'}}> {time} </Text>
      </View>
    </View>
   );

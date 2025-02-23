@@ -17,6 +17,7 @@ import QuoteCard from "./component/QuoteCard";
 import TodayCard from "./component/TodayCard";
 import RamadanTime from "./component/RamadanTime";
 import SalahTime from "./component/SalahTime";
+import MenuCard2 from "./component/ManuCard2";
 
 export default function App() {
   return (
@@ -63,6 +64,34 @@ export default function App() {
        
         
       </ScrollView>
+      <ScrollView  horizontal showsHorizontalScrollIndicator={false} style={{ flexDirection: "row", backgroundColor:'#5B88CB', }}>
+        <MenuCard2
+        menuImage={require('./assets/pray.png')}
+        menuName={"Salah"}
+        />
+         <MenuCard2
+        menuImage={require('./assets/pray.png')}
+        menuName={"Salah"}
+        />
+         <MenuCard2
+        menuImage={require('./assets/pray.png')}
+        menuName={"Salah"}
+        />
+         <MenuCard2
+        menuImage={require('./assets/pray.png')}
+        menuName={"Salah"}
+        />
+         <MenuCard2
+        menuImage={require('./assets/pray.png')}
+        menuName={"Salah"}
+        />
+         <MenuCard2
+        menuImage={require('./assets/pray.png')}
+        menuName={"Salah"}
+        />
+       
+        
+      </ScrollView>
       
       <DuaCard
            iconName={'book-open-variant'}
@@ -100,7 +129,7 @@ export default function App() {
 
     
       
-    
+    <View style={{margin:10, backgroundColor:'#C9FADC',borderRadius:15,padding:5}}>
       <SalahTime
         image={require("./assets/day-and-night.png")}
         name={"Fajar"}
@@ -131,16 +160,58 @@ export default function App() {
         time={"5:30 AM"}
         willEndIn={"1h 35m"}
       />
-      <View style={styles.containerItem4}>
-        <TouchableOpacity>
-          <Text>Item 8 </Text>
-        </TouchableOpacity>
       </View>
-      <View style={styles.containerItem1}>
-        <TouchableOpacity>
-          <Text>Item 1 </Text>
+      <View style={{justifyContent:'center',alignItems:'center',backgroundColor:'#C9FADC',borderRadius:15,padding:5,margin:10}}>
+          <View style={{ height:220, width:220,  backgroundColor: "#E9FDF1", borderRadius: 110,justifyContent:'center',alignItems:'center' }}>
+          <View style={{  height:200, width:200,  backgroundColor: "#C9FADC", borderRadius: 100, justifyContent:'center',alignItems:'center',borderWidth:1,borderColor:'#28Ba7D80' }}>
+            <Text style={{fontSize:48,fontWeight:'bold',textAlign:'center',color:'#28Ba7D'}}> ٱلْمُصَوِّرُ </Text>
+          </View>
+          </View>
+          <Text style={{fontSize:24,fontWeight:'bold',textAlign:'center',color:'#009178'}}> Al-Musawwir	 </Text>
+          <Text style={{fontSize:18,fontWeight:'semibold',textAlign:'center',padding:10}}> The Fashioner,The Organizer, the Designer   </Text>
+          {/* <View style={{flexDirection:'row',justifyContent:'center',alignItems:'center', backgroundColor:'#C9FADC',padding:5,borderRadius:10}}> 
+            <Text> {"<<"} 1 of 99  {">>"} </Text>
+          </View> */}
+        </View>
+      {/* <ScrollView  horizontal showsHorizontalScrollIndicator={false} style={{ flexDirection: "row" }}>
+     
+        <View style={{justifyContent:'center',alignItems:'center'}}>
+          <View style={{ height:220, width:220,  backgroundColor: "#E9FDF1", borderRadius: 110,justifyContent:'center',alignItems:'center' }}>
+          <View style={{  height:180, width:180,  backgroundColor: "#C9FADC", borderRadius: 90, justifyContent:'center',alignItems:'center',borderWidth:1,borderColor:'#28Ba7D80' }}>
+            <Text style={{fontSize:44,fontWeight:'bold',textAlign:'center',color:'#28Ba7D'}}> NAme </Text>
+          </View>
+          </View>
+          <Text style={{fontSize:24,fontWeight:'bold',textAlign:'center',color:'#009178'}}> English </Text>
+          <Text style={{fontSize:18,fontWeight:'semibold',textAlign:'center'}}> the full meaning is there  </Text>
+          <View style={{flexDirection:'row',justifyContent:'center',alignItems:'center', paddingTop:25}}> 
+            <Text> {"<<"} 1 of 99  {">>"} </Text>
+          </View>
+        </View>
+        <View style={{justifyContent:'center',alignItems:'center'}}>
+          <View style={{ height:220, width:220,  backgroundColor: "#E9FDF1", borderRadius: 110,justifyContent:'center',alignItems:'center' }}>
+          <View style={{  height:180, width:180,  backgroundColor: "#C9FADC", borderRadius: 90, justifyContent:'center',alignItems:'center',borderWidth:1,borderColor:'#28Ba7D80' }}>
+            <Text style={{fontSize:44,fontWeight:'bold',textAlign:'center',color:'#28Ba7D'}}> NAme </Text>
+          </View>
+          </View>
+          <Text style={{fontSize:24,fontWeight:'bold',textAlign:'center',color:'#009178'}}> English </Text>
+          <Text style={{fontSize:18,fontWeight:'semibold',textAlign:'center'}}> the full meaning is there  </Text>
+          <View style={{flexDirection:'row',justifyContent:'center',alignItems:'center', paddingTop:25}}> 
+            <Text> {"<<"} 1 of 99  {">>"} </Text>
+          </View>
+        </View>
+       </ScrollView> */}
+     
+        <TouchableOpacity style={{flex:1,flexDirection:"row",borderRadius:15, backgroundColor:'#DBD8D4',alignItems:'center',justifyContent:'center',margin:10}}>
+           <View style={{flex:.6,padding:10}}>
+           <Text style={{fontSize:24}}>Ar-Rahman </Text>
+           <Text style={{fontSize:24 , fontWeight:'bold'}}>আর রাহমান </Text>
+           <Text style={{fontSize:16}}>পরম করুণাময়, সবচেয়ে দয়ালু, কল্যাণময়  </Text>
+            </View>
+            <View style={{flex:.4,textAlign:'center',justifyContent:'center',alignItems:'center'}}>
+           <Text style={{fontSize:42,color:'red',textAlign:'center'}}> الرحمن </Text>
+            </View>
         </TouchableOpacity>
-      </View>
+      
     </ScrollView>
   );
 }
