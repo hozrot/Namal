@@ -5,7 +5,8 @@ import {
   Text,
   TouchableOpacity,
   View,
-  Image
+  Image,
+  ImageBackground
 } from "react-native";
 import DuaCard from "./component/DuaCard";
 import EventCard from "./component/EventCard";
@@ -21,7 +22,7 @@ import MenuCard2 from "./component/ManuCard2";
 
 export default function App() {
   return (
-    <ScrollView>
+    <ScrollView style={{ flex: 1, backgroundColor: "#E7FAE7" }}>
       <View style={styles.Topcontainer}>
         <Text> Namal ! A practising Muslim </Text>
         <StatusBar style="auto" />
@@ -31,10 +32,10 @@ export default function App() {
    
 
      <NameCard
-            title={"Asmaul Husna"}
-            count={2}
+            title={"আসমাউল হুসনা"}
+            count={"২"}
             arabic={"الرحمن"}
-            english={"Ar Rahman"}
+            // english={"Ar Rahman"}
             bangla={"আর রাহমান"}
             meaning={"পরম করুণাময়, সবচেয়ে দয়ালু, কল্যাণময়"}/>
 <Text style={{fontSize:16 , fontWeight:'bold', paddingLeft:10}}> Five Pillar of Islam </Text>
@@ -92,6 +93,11 @@ export default function App() {
        
         
       </ScrollView>
+
+      <View style={{flexDirection:'row',justifyContent:'space-between',padding:10}}>
+        <Text style={{fontSize:16,fontWeight:'bold'}}> আল-কুরআন </Text>
+        <Text style={{fontSize:16,fontWeight:'bold'}}> হাদিস </Text>
+      </View>
       
       <DuaCard
            iconName={'book-open-variant'}
@@ -161,14 +167,18 @@ export default function App() {
         willEndIn={"1h 35m"}
       />
       </View>
-      <View style={{justifyContent:'center',alignItems:'center',backgroundColor:'#C9FADC',borderRadius:15,padding:5,margin:10}}>
+      <View style={{justifyContent:'center',alignItems:'center',backgroundColor:'#C9FADC',borderRadius:15,margin:10,padding:15}}>
           <View style={{ height:220, width:220,  backgroundColor: "#E9FDF1", borderRadius: 110,justifyContent:'center',alignItems:'center' }}>
           <View style={{  height:200, width:200,  backgroundColor: "#C9FADC", borderRadius: 100, justifyContent:'center',alignItems:'center',borderWidth:1,borderColor:'#28Ba7D80' }}>
             <Text style={{fontSize:48,fontWeight:'bold',textAlign:'center',color:'#28Ba7D'}}> ٱلْمُصَوِّرُ </Text>
           </View>
           </View>
-          <Text style={{fontSize:24,fontWeight:'bold',textAlign:'center',color:'#009178'}}> Al-Musawwir	 </Text>
-          <Text style={{fontSize:18,fontWeight:'semibold',textAlign:'center',padding:10}}> The Fashioner,The Organizer, the Designer   </Text>
+          <Text style={{fontSize:24,fontWeight:'bold',textAlign:'center',color:'#009178'}}> আল-মুসাওয়ির	 </Text>
+          {/* <Text style={{fontSize:18,fontWeight:'semibold',textAlign:'center',padding:10}}> The Fashioner,The Organizer, the Designer   </Text> */}
+         
+         <View style={{justifyContent:'center',alignItems:'center'}}>
+          <Text style={{fontSize:18,fontWeight:'semibold',textAlign:'center',padding:2}}> যিনি সমস্ত সৃষ্টিজগত সৃজন করেছেন, তিনি পূর্ব আকৃতি ব্যতীত এগুলোকে সৃষ্টি করেছেন   </Text>
+          </View>
           {/* <View style={{flexDirection:'row',justifyContent:'center',alignItems:'center', backgroundColor:'#C9FADC',padding:5,borderRadius:10}}> 
             <Text> {"<<"} 1 of 99  {">>"} </Text>
           </View> */}
@@ -203,7 +213,7 @@ export default function App() {
      
         <TouchableOpacity style={{flex:1,flexDirection:"row",borderRadius:15, backgroundColor:'#DBD8D4',alignItems:'center',justifyContent:'center',margin:10}}>
            <View style={{flex:.6,padding:10}}>
-           <Text style={{fontSize:24}}>Ar-Rahman </Text>
+           {/* <Text style={{fontSize:24}}>Ar-Rahman </Text> */}
            <Text style={{fontSize:24 , fontWeight:'bold'}}>আর রাহমান </Text>
            <Text style={{fontSize:16}}>পরম করুণাময়, সবচেয়ে দয়ালু, কল্যাণময়  </Text>
             </View>
@@ -211,6 +221,45 @@ export default function App() {
            <Text style={{fontSize:42,color:'red',textAlign:'center'}}> الرحمن </Text>
             </View>
         </TouchableOpacity>
+        <View style={{flex:1,borderRadius:15, backgroundColor:'#FFFBCC',alignItems:'center',justifyContent:'center',margin:10}}>
+          <View style={{flex:.2,paddingBottom:20}}>
+          <Text style={{fontSize:24 ,color:'green', fontWeight:'bold',paddingTop:20}}> ঘুম থেকে উঠার পর দুআ  </Text>
+          </View>
+          <View style={{flex:.4,justifyContent:'center',alignItems:'center',padding:5}}>
+          <Text style={{fontSize:30 , color:'#723419',textAlign:'center',fontWeight:'bold'}}>الحمدُ لله الذي أحيَانَا بَعْدَ مَا أماتَنَا وإليه النُّشُوْر </Text>
+          </View>
+          <View style={{flex:.2,padding:5, width:'100%',justifyContent:'center',alignItems:'center'}}>
+          <Text style={{fontSize:20 , color:'#723419',textAlign:'center',}}> ‘আলহামদুলিল্লা হিল্লাজি আহইয়ানা বা’দা মা আমাতানা ওয়া ইলাইহিন নুশুর’ </Text>
+          </View>
+          <View style={{flex:.2,padding:10,borderBottomWidth:1,borderBottomColor:'green',width:'85%',justifyContent:'center',alignItems:'center'}}>
+          {/* <Text style={{fontSize:20 , color:'#723419',textAlign:'center',paddingBottom:15,}}> ‘আলহামদুলিল্লা হিল্লাজি আহইয়ানা বা’দা মা আমাতানা ওয়া ইলাইহিন নুশুর’ </Text> */}
+          </View>
+          <View style={{flex:.2,padding:5}}>
+          <Text style={{fontSize:18 , color:'#6F7947',textAlign:'center',fontWeight:'500'}}> অর্থ : সমস্ত প্রশংসা আল্লাহর জন্য, যিনি আমাদের মৃত করার পর পুনরায় জীবিত করেছেন। আর তার দিকেই সবার পুনরুত্থান।  </Text>
+          </View>
+          <View style={{flex:.2,padding:5,width:'100%',flexDirection:'row',justifyContent:'flex-end'}}>
+          <Text style={{fontSize:14 , color:'#6F7947',fontWeight:'bold'}}> (বুখারি, হাদিস : ৬৩২৪) </Text>
+          <Text style={{fontSize:14 , color:'#6F7947',fontWeight:'bold'}}> (মুসলিম, হাদিস : ২৭১১) </Text>
+          </View>
+          <View style={{flex:.2,padding:10,width:'100%',justifyContent:'center',alignItems:'center'}}>
+          <Text style={{fontSize:24 , color:'#6F7947'}}> ___ </Text>
+          </View>
+        </View>
+
+        <ImageBackground source={require('./assets/back1.jpg')}
+         style={{flex:1,justifyContent:'center',alignItems:'center',margin:10, borderRadius:25, overflow:'hidden'}}>    
+       
+        <View style={{flex:1,borderRadius:15,margin:10, }}>
+          <Text style={{fontSize:24,fontWeight:'bold',textAlign:'center',padding:10 ,color:'white'}}> আল-মুসাওয়ির	 </Text>
+          <Text style={{fontSize:64,fontWeight:'semibold',textAlign:'center',padding:30,color:'white'}}>ٱلْمُصَوِّرُ </Text>
+          <Text style={{fontSize:20,fontWeight:'semibold',textAlign:'center',padding:20,color:'white'}}>
+             যিনি সমস্ত সৃষ্টিজগত সৃজন করেছেন, তিনি পূর্ব আকৃতি ব্যতীত এগুলোকে সৃষ্টি করেছেন   </Text>
+             <TouchableOpacity style={{flexDirection:'row', justifyContent:'flex-end',padding:5,borderRadius:10}}>
+              <MaterialCommunityIcons name="share" size={36} color="white" />
+          </TouchableOpacity>
+        </View>
+        </ImageBackground>
+       
       
     </ScrollView>
   );
