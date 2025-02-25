@@ -22,11 +22,11 @@ export default function DuaCard({ title, arabic,bangla,english,meaning,reference
                      {arabic}
                    </Text>
                  </View>
-                 <View style={styles.ItemContent}>
+                {english && <View style={styles.ItemContent}>
                    <Text>
                    {english}
                    </Text>
-                 </View>
+                 </View>}
                  <View style={styles.ItemContent}>
                    <Text>
                     {bangla}

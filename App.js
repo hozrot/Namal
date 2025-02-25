@@ -19,6 +19,7 @@ import TodayCard from "./component/TodayCard";
 import RamadanTime from "./component/RamadanTime";
 import SalahTime from "./component/SalahTime";
 import MenuCard2 from "./component/ManuCard2";
+import CurrentTime from "./component/CurrentTime";
 
 export default function App() {
   return (
@@ -65,7 +66,7 @@ export default function App() {
        
         
       </ScrollView>
-      <ScrollView  horizontal showsHorizontalScrollIndicator={false} style={{ flexDirection: "row", backgroundColor:'#5B88CB', }}>
+      <ScrollView  horizontal showsHorizontalScrollIndicator={false} style={{ flexDirection: "row", backgroundColor:'#39A57D',margin:5,borderRadius:15 }}>
         <MenuCard2
         menuImage={require('./assets/pray.png')}
         menuName={"Salah"}
@@ -93,11 +94,65 @@ export default function App() {
        
         
       </ScrollView>
+      <CurrentTime
+        name={"Fajar"}
+        time={"5:30 AM"}
+        willEndIn={"1h 35m"}
+      />
 
-      <View style={{flexDirection:'row',justifyContent:'space-between',padding:10}}>
-        <Text style={{fontSize:16,fontWeight:'bold'}}> আল-কুরআন </Text>
-        <Text style={{fontSize:16,fontWeight:'bold'}}> হাদিস </Text>
+      <TouchableOpacity style={{justifyContent:'center',alignItems:'center',backgroundColor:'#40CC83',borderRadius:35,margin:10}}>
+     
+      <View style={{padding:10,backgroundColor:'#39A57D',borderRadius:35,justifyContent:'center',alignItems:'center',width:'100%'}}>
+      <Text style={{fontSize:16,fontWeight:'bold',color:'white'}}> এখন সময়  </Text>
+      <View style={{padding:10,backgroundColor:'#7FCEAA',justifyContent:'center',alignItems:'center',margin:10}}>
+        <Text style={{fontSize:16,fontWeight:'bold',color:'white'}}> আসর   </Text>
+        <Text style={{fontSize:26,fontWeight:'bold',color:'white'}}> 5:15 PM </Text>
+     </View>
+      <Text style={{fontSize:24,fontWeight:'bold',color:'white'}}> সময় বাকি </Text>
       </View>
+        <Text style={{fontSize:36,fontWeight:'bold',color:'white'}}> 5:10:47 </Text>
+      </TouchableOpacity>
+
+      <View style={{flexDirection:'row',
+       backgroundColor:'#40CC83',borderRadius:35,margin:10}}>
+
+        
+        <View style={{flex:.15,padding:10,textAlign:'center',justifyContent:'center',alignItems:'center',backgroundColor:'#7FCEAA',borderRadius:35}}>
+        <Text  style={{ fontSize:14,color:'white',padding:5,textAlign:'center'}}> 25 {"\n"}Feb</Text>
+        </View>
+        <View style={{flex:.3,justifyContent:'space-around'}}>
+        <Text style={{ fontSize:14,color:'white',padding:5,textAlign:'center'}}> Monday {"\n"} 05 Ramadan </Text>
+       </View>
+
+        <View style={{flex:.3,justifyContent:'space-around'}}>
+        <Text style={{ fontSize:14,color:'white',padding:5,textAlign:'center'}}> Sahri Ends {"\n"} 5:50 AM </Text>
+       </View>
+       <View style={{flex:.3,justifyContent:'space-around'}}>
+       <Text style={{ fontSize:14,color:'white',padding:5,textAlign:'center'}}> Iftar start  {"\n"} 6:10 PM </Text>
+       </View>
+        
+       
+        </View>
+
+
+      <View style={{flexDirection:'row',height:150,
+       backgroundColor:'#40CC83',borderRadius:35,margin:10}}>
+      <View style={{flex:.4,padding:10,justifyContent:'space-around'}}>
+
+       <Text>  Direction </Text>
+       <Text style={{ fontSize:14,color:'white',padding:5,textAlign:'center'}}>Nearst Mosque is  in 1.2 KM away  </Text>
+      
+      <TouchableOpacity style={{flexDirection:'row',backgroundColor:'#7FCEAA',padding:5,borderRadius:35,justifyContent:'center',alignItems:'center'}}>
+       <MaterialCommunityIcons name="map-marker" size={16} color="red" />
+       <Text>Way in Map</Text>
+       </TouchableOpacity>
+       </View>
+      <View style={{flex:.6,justifyContent:'center',alignItems:'center',backgroundColor:'#7FCEAA',borderRadius:35}}>
+
+       <Text>Compass</Text>
+       </View>
+      
+        </View>
       
       <DuaCard
            iconName={'book-open-variant'}
@@ -105,7 +160,7 @@ export default function App() {
             iconColor={"green"}
             title={"Dua"}
             arabic={"اللهمّ لا سهلا إلا ما جالتاهو سهلا، وأنت تجالول هازنا إذا شئت سهلا"}
-            english={"Allahumma la sahla illama ja'altahu sahla, wa anta taj'aa lul hazna eja shi'ta sahla"}
+            //english={"Allahumma la sahla illama ja'altahu sahla, wa anta taj'aa lul hazna eja shi'ta sahla"}
             bangla={"আল্লাহুম্মা লা সাহলা ইল্লামা জা'আলতাহু সাহলা, ওয়া আন্তা তাজ'আ লুল হাজনা ইজা শী'তা সাহলা"}
             meaning={"হে আল্লাহ, আপনি যা সহজ করেন তা ছাড়া আর কোন সহজ নেই এবং আপনি চাইলে কঠিনকে সহজ করতে পারেন।"}
             reference={"Ibn Majah 1/335"}
@@ -114,7 +169,7 @@ export default function App() {
      
      <EventList listName={"Upcoming Event" } eventName={"Eid ul Fitr"} daysRemaining={43} day={5} month={"April"} />
       
-     <QuoteCard QuotesTitle={"Todays Hadith"} 
+     <QuoteCard QuotesTitle={"আজকের হাদিস"} 
                 Quote={" তোমাদের যে কোন ব্যক্তি যে কোন অন্যায় কাজ দেখবে সে যেন তা বল প্রয়োগে বাধা প্রদান করে। এভাবে সম্ভব না হলে মুখে বাধা প্রদান করবে। সম্ভব না হলে সে অন্যায়কে ঘৃণা করবে। আর অন্তরে ঘৃণা করে বাধা প্রদান করা কাজটি সবচেয়ে দুর্বল ঈমানের পরিচয় "}
                 Reference={"সহিহ বুখারী, হাদিস নং ৬০৮৬"} />
                 
@@ -128,8 +183,8 @@ export default function App() {
         />
 
         <RamadanTime
-        sunrise={"6:05 AM"}
-        sunset={"6:05 PM"}
+          sunrise={"6:05 AM"}
+          sunset={"6:05 PM"}
           iftar={"5:50 PM"}
           sahri={"5:15 AM"}/>
 
