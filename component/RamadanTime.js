@@ -36,7 +36,7 @@ export default function RamadanTime({ sunrise,sunset, iftar,sahri,english,fajar,
 <ViewShot ref={cardRef} options={{ format: 'png', quality: 0.8 }}>
      
       {/* <ImageBackground source={require('../assets/back1.jpg')}> */}
-        <View style={{ justifyContent:'center',alignItems:'center',padding:5,margin:10,borderRadius:15}}> 
+        <View style={{ backgroundColor:'#58A8D7', justifyContent:'center',alignItems:'center',padding:5,margin:10,borderRadius:15}}> 
         <Text style={{textAlign:'center',fontWeight:'bold',fontSize:24,paddingBottom:10}}>  আজ সোমবার </Text>
         {/* <Text style={{textAlign:'center',paddingBottom:5,fontWeight:'bold',fontSize:16}}>  সাপ্তাহিক রোজার দিন  </Text> */}
                <View style={{ flex:1,flexDirection: "row" , justifyContent:'center',alignItems:'center'}}> 

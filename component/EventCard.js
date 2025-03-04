@@ -14,11 +14,9 @@ export default function EventCard({
       style={{
         flexDirection: "row",
         width: "100%",
-        paddingLeft: 15,
-        justifyContent: "center",
-        alignItems: "center",
-        paddingBottom: 5,
-        backgroundColor: { backgroundColor: bgColor},
+        paddingLeft:30
+       
+        
       }}
     >
       <View style={{ flex: 0.1 }}>

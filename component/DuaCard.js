@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 export default function DuaCard({ title, arabic,bangla,english,meaning,reference, onPress, date, iconName, iconSize, amount,category,backgroundColor='#7FC56C',
     iconColor = 'green' }) {
     return (
-       <View style={styles.card}>
+       <TouchableOpacity style={styles.card} onPress={onPress}>
                <View style={styles.header}>
                <MaterialCommunityIcons name={iconName} size={iconSize} color={iconColor} />
                  <View style={{ flex: 1, paddingLeft: 20 }}>
@@ -37,25 +37,25 @@ export default function DuaCard({ title, arabic,bangla,english,meaning,reference
                   <Text> {meaning}</Text>
                  </View>
                </View>
-               <View style={styles.ItemFooter}>
+               {/* <View style={styles.ItemFooter}>
                 <TouchableOpacity>
                 <Text> Details.. </Text>
                 </TouchableOpacity>
                 
-                <TouchableOpacity style={{ flexDirection: "row" }}>
+                <TouchableOpacity style={{ flexDirection: "row" }} onPress={onPress}>
                 <Text> More. </Text>
                     <MaterialCommunityIcons name="arrow-right" size={20} color="black" />
                 </TouchableOpacity>
 
-               </View>
-             </View>
+               </View> */}
+             </TouchableOpacity>
     );
 }
 
 const styles = StyleSheet.create({
     card: {
         flex: 1,
-        backgroundColor: "#fff",
+        
         alignItems: "center",
         backgroundColor: "lightblue",
         margin: 10,
@@ -68,19 +68,20 @@ const styles = StyleSheet.create({
       ItemBody: {
         flex: 0.8,
         flexDirection: "column",
-        backgroundColor: "lightgreen",
+       
       },
       ItemContent: {
         flexDirection: "row",
-        backgroundColor: "lightgreen",
+        
         justifyContent: "center",
         alignItems: "center",
         padding: 5,
       },
       Arabic: {
         fontSize: 30,
-        color: "red",
+        color: "black",
         textAlign: "center",
+        fontWeight:'bold'
       },
       Bangla: {},
       English: {},
@@ -88,9 +89,10 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "row",
         padding: 5,
-        backgroundColor: "lightblue",
         justifyContent: "space-between",
         width: "100%",
+        borderRadius:15,
+        borderWidth:2
       },
 
 })

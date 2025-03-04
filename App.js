@@ -29,7 +29,12 @@ export default function App() {
         <StatusBar style="auto" />
       </View>
      
-       <EventCard  eventName={"Eid ul Fitr"} daysRemaining={43} eventImage={require('./assets/moon.png')} />
+      <CurrentTime
+        name={"Fajar"}
+        time={"5:30 AM"}
+        willEndIn={"1h 35m"}
+      />
+
    
 
      <NameCard
@@ -39,10 +44,10 @@ export default function App() {
             // english={"Ar Rahman"}
             bangla={"আর রাহমান"}
             meaning={"পরম করুণাময়, সবচেয়ে দয়ালু, কল্যাণময়"}/>
-<Text style={{fontSize:16 , fontWeight:'bold', paddingLeft:10}}> Five Pillar of Islam </Text>
+      {/* <Text style={{fontSize:16 , fontWeight:'bold', paddingLeft:10}}> Five Pillar of Islam </Text> */}
     
 
-      <ScrollView  horizontal showsHorizontalScrollIndicator={false} style={{ flexDirection: "row" }}>
+      {/* <ScrollView  horizontal showsHorizontalScrollIndicator={false} style={{ flexDirection: "row" }}>
         <MenuCard 
         menuImage={require('./assets/pray.png')}
         menuName={"Salah"}
@@ -65,26 +70,26 @@ export default function App() {
         />
        
         
-      </ScrollView>
+      </ScrollView> */}
       <ScrollView  horizontal showsHorizontalScrollIndicator={false} style={{ flexDirection: "row", backgroundColor:'#39A57D',margin:5,borderRadius:15 }}>
         <MenuCard2
         menuImage={require('./assets/pray.png')}
         menuName={"Salah"}
         />
          <MenuCard2
-        menuImage={require('./assets/pray.png')}
+        menuImage={require('./assets/kabaa.png')}
         menuName={"Salah"}
         />
          <MenuCard2
-        menuImage={require('./assets/pray.png')}
+        menuImage={require('./assets/alms.png')}
         menuName={"Salah"}
         />
          <MenuCard2
-        menuImage={require('./assets/pray.png')}
+        menuImage={require('./assets/bismillah.png')}
         menuName={"Salah"}
         />
          <MenuCard2
-        menuImage={require('./assets/pray.png')}
+        menuImage={require('./assets/iftar.png')}
         menuName={"Salah"}
         />
          <MenuCard2
@@ -94,25 +99,9 @@ export default function App() {
        
         
       </ScrollView>
-      <CurrentTime
-        name={"Fajar"}
-        time={"5:30 AM"}
-        willEndIn={"1h 35m"}
-      />
-
-      <TouchableOpacity style={{justifyContent:'center',alignItems:'center',backgroundColor:'#40CC83',borderRadius:35,margin:10}}>
      
-      <View style={{padding:10,backgroundColor:'#39A57D',borderRadius:35,justifyContent:'center',alignItems:'center',width:'100%'}}>
-      <Text style={{fontSize:16,fontWeight:'bold',color:'white'}}> এখন সময়  </Text>
-      <View style={{padding:10,backgroundColor:'#7FCEAA',justifyContent:'center',alignItems:'center',margin:10}}>
-        <Text style={{fontSize:16,fontWeight:'bold',color:'white'}}> আসর   </Text>
-        <Text style={{fontSize:26,fontWeight:'bold',color:'white'}}> 5:15 PM </Text>
-     </View>
-      <Text style={{fontSize:24,fontWeight:'bold',color:'white'}}> সময় বাকি </Text>
-      </View>
-        <Text style={{fontSize:36,fontWeight:'bold',color:'white'}}> 5:10:47 </Text>
-      </TouchableOpacity>
-
+     
+{/* <EventCard  eventName={"Eid ul Fitr"} daysRemaining={24} eventImage={require('./assets/moon.png')} /> */}
       <View style={{flexDirection:'row',
        backgroundColor:'#40CC83',borderRadius:35,margin:10}}>
 
@@ -125,14 +114,14 @@ export default function App() {
        </View>
 
         <View style={{flex:.3,justifyContent:'space-around'}}>
-        <Text style={{ fontSize:14,color:'white',padding:5,textAlign:'center'}}> Sahri Ends {"\n"} 5:50 AM </Text>
+        <Text style={{ fontSize:14,color:'white',padding:5,textAlign:'center'}}> Sahri Ends {"\n"} 5:05 AM </Text>
        </View>
        <View style={{flex:.3,justifyContent:'space-around'}}>
-       <Text style={{ fontSize:14,color:'white',padding:5,textAlign:'center'}}> Iftar start  {"\n"} 6:10 PM </Text>
+       <Text style={{ fontSize:14,color:'white',padding:5,textAlign:'center'}}> Iftar start  {"\n"} 6:12 PM </Text>
        </View>
         
        
-        </View>
+        </View> 
 
 
       <View style={{flexDirection:'row',height:150,
@@ -157,30 +146,30 @@ export default function App() {
       <DuaCard
            iconName={'book-open-variant'}
             iconSize={36}
-            iconColor={"green"}
+            iconColor={"blue"}
             title={"Dua"}
             arabic={"اللهمّ لا سهلا إلا ما جالتاهو سهلا، وأنت تجالول هازنا إذا شئت سهلا"}
             //english={"Allahumma la sahla illama ja'altahu sahla, wa anta taj'aa lul hazna eja shi'ta sahla"}
             bangla={"আল্লাহুম্মা লা সাহলা ইল্লামা জা'আলতাহু সাহলা, ওয়া আন্তা তাজ'আ লুল হাজনা ইজা শী'তা সাহলা"}
             meaning={"হে আল্লাহ, আপনি যা সহজ করেন তা ছাড়া আর কোন সহজ নেই এবং আপনি চাইলে কঠিনকে সহজ করতে পারেন।"}
             reference={"Ibn Majah 1/335"}
-            onPress={() => console.log("DuaCard")}
+          //  onPress={() => console.log("DuaCard9")}
           />
      
-     <EventList listName={"Upcoming Event" } eventName={"Eid ul Fitr"} daysRemaining={43} day={5} month={"April"} />
+     {/* <EventList listName={"Upcoming Event" } eventName={"Eid ul Fitr"} daysRemaining={43} day={5} month={"April"} /> */}
       
      <QuoteCard QuotesTitle={"আজকের হাদিস"} 
                 Quote={" তোমাদের যে কোন ব্যক্তি যে কোন অন্যায় কাজ দেখবে সে যেন তা বল প্রয়োগে বাধা প্রদান করে। এভাবে সম্ভব না হলে মুখে বাধা প্রদান করবে। সম্ভব না হলে সে অন্যায়কে ঘৃণা করবে। আর অন্তরে ঘৃণা করে বাধা প্রদান করা কাজটি সবচেয়ে দুর্বল ঈমানের পরিচয় "}
                 Reference={"সহিহ বুখারী, হাদিস নং ৬০৮৬"} />
                 
      
-        <TodayCard
+        {/* <TodayCard
           sunrise={"6:05 AM"}
           sunset={"6:05 PM"}
           english={"Friday, 21 February 2025"}
           arabic={"20 Shaban 1446 Hijri"}
           bangla={"শুক্রবার, ১২ ফাল্গুন, ১৪৩১ বঙ্গাব্দ"}
-        />
+        /> */}
 
         <RamadanTime
           sunrise={"6:05 AM"}
@@ -190,7 +179,7 @@ export default function App() {
 
     
       
-    <View style={{margin:10, backgroundColor:'#C9FADC',borderRadius:15,padding:5}}>
+    {/* <View style={{margin:10, backgroundColor:'#C9FADC',borderRadius:15,padding:5}}>
       <SalahTime
         image={require("./assets/day-and-night.png")}
         name={"Fajar"}
@@ -221,7 +210,7 @@ export default function App() {
         time={"5:30 AM"}
         willEndIn={"1h 35m"}
       />
-      </View>
+      </View> */}
       <View style={{justifyContent:'center',alignItems:'center',backgroundColor:'#C9FADC',borderRadius:15,margin:10,padding:15}}>
           <View style={{ height:220, width:220,  backgroundColor: "#E9FDF1", borderRadius: 110,justifyContent:'center',alignItems:'center' }}>
           <View style={{  height:200, width:200,  backgroundColor: "#C9FADC", borderRadius: 100, justifyContent:'center',alignItems:'center',borderWidth:1,borderColor:'#28Ba7D80' }}>
@@ -265,15 +254,22 @@ export default function App() {
           </View>
         </View>
        </ScrollView> */}
+      
+      
+      <View style={{justifyContent:'center',alignItems:'center'}}> <Text style={{fontSize:16 , fontWeight:'bold'}} >  সূরা পরিচিতি </Text>
+      </View>
      
-        <TouchableOpacity style={{flex:1,flexDirection:"row",borderRadius:15, backgroundColor:'#DBD8D4',alignItems:'center',justifyContent:'center',margin:10}}>
-           <View style={{flex:.6,padding:10}}>
+        <TouchableOpacity style={{flex:1,flexDirection:"row",borderRadius:15, backgroundColor:'#DBD8D4',margin:10}}>
+           <View style={{flex:.4,justifyContent:'center',alignItems:'flex-end'}}>
            {/* <Text style={{fontSize:24}}>Ar-Rahman </Text> */}
-           <Text style={{fontSize:24 , fontWeight:'bold'}}>আর রাহমান </Text>
-           <Text style={{fontSize:16}}>পরম করুণাময়, সবচেয়ে দয়ালু, কল্যাণময়  </Text>
+           <Text style={{fontSize:24 , fontWeight:'bold'}}> বাকারা  </Text>
+           <Text style={{fontSize:16}}> অর্থঃ গাভী   </Text>
             </View>
-            <View style={{flex:.4,textAlign:'center',justifyContent:'center',alignItems:'center'}}>
-           <Text style={{fontSize:42,color:'red',textAlign:'center'}}> الرحمن </Text>
+            <View style={{flex:.6,textAlign:'center',justifyContent:'center',alignItems:'center'}}>
+          
+           
+           <Text style={{fontSize:42,color:'red',textAlign:'center'}}> البَقَرَة </Text>
+           <Text style={{fontSize:14,textAlign:'center'}}> Ayat: 115, Madani  </Text>
             </View>
         </TouchableOpacity>
         <View style={{flex:1,borderRadius:15, backgroundColor:'#FFFBCC',alignItems:'center',justifyContent:'center',margin:10}}>

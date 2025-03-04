@@ -24,7 +24,7 @@ export default function MenuCard2({
     >
       <Image
         source={menuImage}
-        style={{ width: 60, height: 60 ,borderRadius:35,borderWidth:3,borderColor:'white',resizeMode:'cover' }}
+        style={{ width: 60, height: 60 ,borderRadius:35,borderWidth:4,borderColor:'white',resizeMode:'stretch' }}
       />
 
       <Text style={{ fontSize: 16, fontWeight: "bold" }}> {menuName} </Text>
