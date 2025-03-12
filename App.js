@@ -23,7 +23,7 @@ import CurrentTime from "./component/CurrentTime";
 
 export default function App() {
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: "#E7FAE7" }}>
+    <ScrollView style={{ flex: 1, backgroundColor: "#7FCEAA" }}>
       <View style={styles.Topcontainer}>
         <Text> Namal ! A practising Muslim </Text>
         <StatusBar style="auto" />
@@ -37,13 +37,13 @@ export default function App() {
 
    
 
-     <NameCard
+     {/* <NameCard
             title={"আসমাউল হুসনা"}
             count={"২"}
             arabic={"الرحمن"}
             // english={"Ar Rahman"}
             bangla={"আর রাহমান"}
-            meaning={"পরম করুণাময়, সবচেয়ে দয়ালু, কল্যাণময়"}/>
+            meaning={"পরম করুণাময়, সবচেয়ে দয়ালু, কল্যাণময়"}/> */}
       {/* <Text style={{fontSize:16 , fontWeight:'bold', paddingLeft:10}}> Five Pillar of Islam </Text> */}
     
 
@@ -74,30 +74,24 @@ export default function App() {
       <ScrollView  horizontal showsHorizontalScrollIndicator={false} style={{ flexDirection: "row", backgroundColor:'#39A57D',margin:5,borderRadius:15 }}>
         <MenuCard2
         menuImage={require('./assets/pray.png')}
-        menuName={"Salah"}
+        menuName={"নামায"}
         />
          <MenuCard2
         menuImage={require('./assets/kabaa.png')}
-        menuName={"Salah"}
+        menuName={"হজ্জ"}
         />
          <MenuCard2
         menuImage={require('./assets/alms.png')}
-        menuName={"Salah"}
+        menuName={"যাকাত"}
         />
          <MenuCard2
         menuImage={require('./assets/bismillah.png')}
-        menuName={"Salah"}
+        menuName={"ঈমান"}
         />
          <MenuCard2
         menuImage={require('./assets/iftar.png')}
-        menuName={"Salah"}
-        />
-         <MenuCard2
-        menuImage={require('./assets/pray.png')}
-        menuName={"Salah"}
-        />
-       
-        
+        menuName={"সাওম"}
+        />        
       </ScrollView>
      
      
@@ -106,7 +100,7 @@ export default function App() {
        backgroundColor:'#40CC83',borderRadius:35,margin:10}}>
 
         
-        <View style={{flex:.15,padding:10,textAlign:'center',justifyContent:'center',alignItems:'center',backgroundColor:'#7FCEAA',borderRadius:35}}>
+        <View style={{flex:.15,padding:10,textAlign:'center',justifyContent:'center',alignItems:'center',backgroundColor:'#7FCEAA',borderRadius:35,borderWidth:1,borderColor:'white'}}>
         <Text  style={{ fontSize:14,color:'white',padding:5,textAlign:'center'}}> 25 {"\n"}Feb</Text>
         </View>
         <View style={{flex:.3,justifyContent:'space-around'}}>
@@ -136,7 +130,7 @@ export default function App() {
        <Text>Way in Map</Text>
        </TouchableOpacity>
        </View>
-      <View style={{flex:.6,justifyContent:'center',alignItems:'center',backgroundColor:'#7FCEAA',borderRadius:35}}>
+      <View style={{flex:.6,justifyContent:'center',alignItems:'center',backgroundColor:'#7FCEAA',borderRadius:35,borderWidth:1,borderColor:'white'}}>
 
        <Text>Compass</Text>
        </View>
@@ -160,7 +154,8 @@ export default function App() {
       
      <QuoteCard QuotesTitle={"আজকের হাদিস"} 
                 Quote={" তোমাদের যে কোন ব্যক্তি যে কোন অন্যায় কাজ দেখবে সে যেন তা বল প্রয়োগে বাধা প্রদান করে। এভাবে সম্ভব না হলে মুখে বাধা প্রদান করবে। সম্ভব না হলে সে অন্যায়কে ঘৃণা করবে। আর অন্তরে ঘৃণা করে বাধা প্রদান করা কাজটি সবচেয়ে দুর্বল ঈমানের পরিচয় "}
-                Reference={"সহিহ বুখারী, হাদিস নং ৬০৮৬"} />
+                Reference={"সহিহ বুখারী, হাদিস নং ৬০৮৬"}
+                bgcolor={"#7FCEAA"} />
                 
      
         {/* <TodayCard
