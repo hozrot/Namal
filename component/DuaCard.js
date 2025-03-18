@@ -28,13 +28,13 @@ export default function DuaCard({ title, arabic,bangla,english,meaning,reference
                    </Text>
                  </View>}
                  <View style={styles.ItemContent}>
-                   <Text>
+                   <Text style={styles.Bangla}>
                     {bangla}
                    </Text>
                  </View>
        
                  <View style={styles.ItemContent}>
-                  <Text> {meaning}</Text>
+                  <Text style={styles.Meaning}> {meaning}</Text>
                  </View>
                </View>
                {/* <View style={styles.ItemFooter}>
@@ -71,8 +71,7 @@ const styles = StyleSheet.create({
        
       },
       ItemContent: {
-        flexDirection: "row",
-        
+        flexDirection: "row", 
         justifyContent: "center",
         alignItems: "center",
         padding: 5,
@@ -83,7 +82,14 @@ const styles = StyleSheet.create({
         textAlign: "center",
         fontWeight:'bold'
       },
-      Bangla: {},
+      Bangla: {fontSize: 16,
+        color: "black",
+        textAlign: "center",
+        fontWeight:'bold'},
+        Meaning: {fontSize: 14,
+          color: "black",
+          textAlign: "center",
+          fontWeight:'bold'},
       English: {},
       ItemFooter: {
         flex: 1,
