@@ -75,7 +75,7 @@ export default function AsmaulHusna({onPress,bangla}) {
                       <Text
                         style={{
                           fontSize: 18,
-                          fontWeight: "semibold",
+                          fontWeight: "bold",
                           textAlign: "center",
                           padding: 2,
                         }}

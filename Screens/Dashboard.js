@@ -1,4 +1,5 @@
 import { StatusBar } from "expo-status-bar";
+import React, { useState, useEffect } from "react";
 import {
   ScrollView,
   StyleSheet,
@@ -17,9 +18,43 @@ import NameCard2 from "../component/NameCard2";
 import DirectionCard from "../component/DirectionCard";
 import DuaCard2 from "../component/DuaCard2";
 import SurahCard from "../component/SurahCard";
+import { ayaList } from "../Database/QuranAyat";
+import asmaulHusna from "../Database/Name";
+import surahs from "../Database/Surah";
 
+function convertToBanglaNumber(number) {
+    const banglaNumbers = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
+    return number.toString().split("").map(digit => banglaNumbers[parseInt(digit)]).join("");
+  }  
+
+export const getRandomAya = () => {
+    const randomIndex = Math.floor(Math.random() * ayaList.length);
+    return ayaList[randomIndex];
+  };
+  export const getRandomName = () => {
+    const randomIndex = Math.floor(Math.random() * asmaulHusna.length);
+    return asmaulHusna[randomIndex];
+  };
+  export const getRandomSurah = () => {
+    const randomIndex = Math.floor(Math.random() * surahs.length);
+    return surahs[randomIndex];
+  };
 
 export default function Dashboard({ navigation }) {
+
+    
+        const [randomAya, setRandomAya] = useState(getRandomAya());
+        const [randomName, setRandomName] = useState(getRandomName());
+        const [randomSurah, setRandomSurah] = useState(getRandomSurah());
+      
+        useEffect(() => {
+          // প্রতিবার কম্পোনেন্ট মাউন্ট হওয়ার সময় নতুন র্যান্ডম 
+          setRandomAya(getRandomAya());
+          setRandomName(getRandomName());
+          setRandomSurah(getRandomSurah()); 
+        }, []);
+
+    
   return (
     <ScrollView style={{ flex: 1, backgroundColor: "#7FCEAA" }}>
       <View style={styles.Topcontainer}>
@@ -99,10 +134,12 @@ export default function Dashboard({ navigation }) {
      {/* <EventList listName={"Upcoming Event" } eventName={"Eid ul Fitr"} daysRemaining={43} day={5} month={"April"} /> */}
       
      <QuoteCard QuotesTitle={" পরামর্শ"} 
+     titelColor={"green"}
                 Quote={" তোমাদের যে কোন ব্যক্তি যে কোন অন্যায় কাজ দেখবে সে যেন তা বল প্রয়োগে বাধা প্রদান করে। এভাবে সম্ভব না হলে মুখে বাধা প্রদান করবে। সম্ভব না হলে সে অন্যায়কে ঘৃণা করবে। আর অন্তরে ঘৃণা করে বাধা প্রদান করা কাজটি সবচেয়ে দুর্বল ঈমানের পরিচয়। "}
                 Reference={"সহিহ বুখারী, হাদিস নং ৬০৮৬"}
                />
                  <QuoteCard QuotesTitle={" নিষেধ "} 
+                 titelColor={"red"}
                 Quote={" তোমাদের যে কোন ব্যক্তি যে কোন অন্যায় কাজ দেখবে সে যেন তা বল প্রয়োগে বাধা প্রদান করে। এভাবে সম্ভব না হলে মুখে বাধা প্রদান করবে। সম্ভব না হলে সে অন্যায়কে ঘৃণা করবে। আর অন্তরে ঘৃণা করে বাধা প্রদান করা কাজটি সবচেয়ে দুর্বল ঈমানের পরিচয়। "}
                 Reference={"সহিহ বুখারী, হাদিস নং ৬০৮৬"}
                />
@@ -111,33 +148,32 @@ export default function Dashboard({ navigation }) {
            iconName={'book'}
             iconSize={36}
             iconColor={"yellow"}
-            reference={"(সূরা আরাফ, আয়াত: ১৫৬)"}
-            title={"কুরআন এর আয়াত "}
-            arabic={"وَرَحْمَتِي وَسِعَتْ كُلَّ شَيْءٍ"}
-            //english={"Allahumma la sahla illama ja'altahu sahla, wa anta taj'aa lul hazna eja shi'ta sahla"}
-           // bangla={"ইয়া মুক্বাল্লিবাল ক্বুলূব! সাব্বিত ক্বালবী ‘আলা দীনিকা"}
-            meaning={"অর্থ: আমার রহমত সব বস্তুকে আবৃত করে আছে।"}
-            //reference={"ইবনে মাজাহ  ১/৩৩৫ "}
-          //  onPress={() => console.log("DuaCard9")}
+            reference={randomAya.reference}
+            title={"কুরআন এর আয়াত "}
+            arabic={randomAya.arabic}
+            bangla={randomAya.bangla}
+            meaning={randomAya.meaning}
           />
                 
      
         
      <NameCard2
-     arabic={"ٱلْمُصَوِّرُ"}
-      bangla={"আল-মুসাওয়ির	"}
-      meaning={"যিনি সমস্ত সৃষ্টিজগত সৃজন করেছেন, তিনি পূর্ব আকৃতি ব্যতীত এগুলোকে সৃষ্টি করেছেন  "}
+     arabic={randomName.arabic}
+      bangla={randomName.bangla}
+      meaning={randomName.meaning}
       onPress={() => navigation.navigate('AsmaulHusna')}/>
 
     
       
       
      <SurahCard 
-        serial={"৫৯"}
-        arabic={"الْحَشْر"}
-        bangla={"আল-হাশর"}
-        meaning={"সমাবেশ"}
-        reference={"আয়াতঃ ২৪ মাদানী "}
+        serial={randomSurah.id}
+        arabic={randomSurah.arabic}
+        bangla={randomSurah.bangla}
+        meaning={randomSurah.meaning}
+        reference={randomSurah.meccan ? 'মক্কী ' : 'মাদীনি'}
+        aya={convertToBanglaNumber(randomSurah.ayah)}
+      
         onPress={()=> navigation.navigate('SurahList')}/>
 
         <DuaCard2

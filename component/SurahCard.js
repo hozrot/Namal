@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-export default function SurahCard({ serial,name, title, arabic,bangla,english,meaning,reference, onPress, date, iconName, iconSize, amount,category,backgroundColor='#7FC56C',
+export default function SurahCard({ serial,name,aya, title, arabic,bangla,english,meaning,reference, onPress, date, iconName, iconSize, amount,category,backgroundColor='#7FC56C',
     iconColor = 'green' }) {
     return (
        <TouchableOpacity style={styles.card} onPress={onPress} >
@@ -21,7 +21,8 @@ export default function SurahCard({ serial,name, title, arabic,bangla,english,me
                   
                    
                    <Text style={{fontSize:42,color:'red',textAlign:'center'}}> {arabic} </Text>
-                   <Text style={{fontSize:14,textAlign:'center'}}> {reference} </Text>
+                   <Text style={{fontSize:14,textAlign:'center'}}>  আয়াত সংখ্যাঃ {aya} , {reference}  </Text>
+                   <Text style={{fontSize:14,textAlign:'center'}}>     </Text>
                     </View>
                 </View>
             </View>

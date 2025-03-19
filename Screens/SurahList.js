@@ -5,7 +5,10 @@ import surahs from '../Database/Surah';
 import asmaulHusna from '../Database/Name';
 import surahList from '../Database/Surah';
 
-
+function convertToBanglaNumber(number) {
+  const banglaNumbers = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
+  return number.toString().split("").map(digit => banglaNumbers[parseInt(digit)]).join("");
+} 
 
 export default function SurahList() {
  
@@ -25,14 +28,14 @@ export default function SurahList() {
            <TouchableOpacity style={{flex:1,flexDirection:"row"}}>
                  <View style={{flex:.4,justifyContent:'center',alignItems:'flex-end'}}>
                  {/* <Text style={{fontSize:24}}>Ar-Rahman </Text> */}
-                 <Text style={{fontSize:24 , fontWeight:'bold'}}> {item.bangla}  </Text>
+                 <Text style={{fontSize:18 , fontWeight:'bold'}}> {item.bangla}  </Text>
                  <Text style={{fontSize:16}}> {item.meaning}   </Text>
                   </View>
                   <View style={{flex:.6,textAlign:'center',justifyContent:'center',alignItems:'center'}}>
                 
                  
                  <Text style={{fontSize:42,color:'red',textAlign:'center'}}> {item.arabic} </Text>
-                 <Text style={{fontSize:14,textAlign:'center'}}>  আয়াতঃ {item.ayah} </Text>
+                 <Text style={{fontSize:14,textAlign:'center'}}>  আয়াতঃ {convertToBanglaNumber(item.ayah)},  {item.meccan ? 'মক্কী ' : 'মাদীনি'} </Text>
                   </View>
               </TouchableOpacity>
           </View>

@@ -5,6 +5,9 @@ export default function Iman({}) {
     return (
     <View style={styles.container}>
         <Text> Iman </Text>
+        <Text> বিশ্বাস  </Text>
+        <Text> কালেমা  </Text>
+        <Text> ইমান  </Text>
     </View>
     );
 }

@@ -4,7 +4,20 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 export default function Siam({}) {
     return (
     <View style={styles.container}>
-        <Text> Siam </Text>
+         <Text> ফরয  </Text>
+               <Text> নফল  </Text>
+               <Text> সুন্নাত  </Text>
+               <Text> গুরুত্ব  </Text>
+               <Text> নিয়ম   </Text>
+                <Text> আমল   </Text>
+                <Text> দোয়া    </Text>
+                <Text> ............   </Text>
+                <Text> ইফতার     </Text>
+                <Text> সেহরি    </Text>
+               
+
+
+
     </View>
     );
 }

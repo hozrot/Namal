@@ -5,6 +5,10 @@ export default function Jakat({}) {
     return (
     <View style={styles.container}>
         <Text> Jakat </Text>
+        <Text> নিয়ম  </Text>
+        <Text> হিসাব  </Text>
+        <Text> আমল   </Text>
+        <Text> গুরুত্ব  </Text>
     </View>
     );
 }

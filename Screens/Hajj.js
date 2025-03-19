@@ -5,6 +5,11 @@ export default function Hajj({}) {
     return (
     <View style={styles.container}>
         <Text> Hajj </Text>
+        <Text> হজ্জ  </Text>
+        <Text> ওমরাহ  </Text>
+        <Text> নিয়ম   </Text>
+        <Text> সময়   </Text>
+        <Text> গুরুতব   </Text>
     </View>
     );
 }
