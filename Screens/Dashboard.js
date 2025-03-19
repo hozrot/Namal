@@ -19,7 +19,7 @@ import DuaCard2 from "../component/DuaCard2";
 import SurahCard from "../component/SurahCard";
 
 
-export default function Dashboard() {
+export default function Dashboard({ navigation }) {
   return (
     <ScrollView style={{ flex: 1, backgroundColor: "#7FCEAA" }}>
       <View style={styles.Topcontainer}>
@@ -33,23 +33,29 @@ export default function Dashboard() {
         <MenuCard2
         menuImage={require('../assets/pray.png')}
         menuName={"নামায"}
-        />
-         <MenuCard2
-        menuImage={require('../assets/kabaa.png')}
-        menuName={"হজ্জ"}
-        />
-         <MenuCard2
-        menuImage={require('../assets/alms.png')}
-        menuName={"যাকাত"}
-        />
-         <MenuCard2
-        menuImage={require('../assets/bismillah.png')}
-        menuName={"ঈমান"}
+        onPress={() => navigation.navigate('Salah')}
         />
          <MenuCard2
         menuImage={require('../assets/iftar.png')}
         menuName={"সাওম"}
-        />        
+        onPress={() => navigation.navigate('Siam')}
+        />  
+         <MenuCard2
+        menuImage={require('../assets/kabaa.png')}
+        menuName={"হজ্জ"}
+        onPress={() => navigation.navigate('Hajj')}
+        />
+         <MenuCard2
+        menuImage={require('../assets/alms.png')}
+        menuName={"যাকাত"}
+        onPress={() => navigation.navigate('Jakat')}
+        />
+         <MenuCard2
+        menuImage={require('../assets/bismillah.png')}
+        menuName={"ঈমান"}
+        onPress={() => navigation.navigate('Iman')}
+        />
+              
       </ScrollView>
       
       <View style={{flexDirection:'row',
@@ -92,17 +98,36 @@ export default function Dashboard() {
      
      {/* <EventList listName={"Upcoming Event" } eventName={"Eid ul Fitr"} daysRemaining={43} day={5} month={"April"} /> */}
       
-     <QuoteCard QuotesTitle={" হাদিস"} 
+     <QuoteCard QuotesTitle={" পরামর্শ"} 
                 Quote={" তোমাদের যে কোন ব্যক্তি যে কোন অন্যায় কাজ দেখবে সে যেন তা বল প্রয়োগে বাধা প্রদান করে। এভাবে সম্ভব না হলে মুখে বাধা প্রদান করবে। সম্ভব না হলে সে অন্যায়কে ঘৃণা করবে। আর অন্তরে ঘৃণা করে বাধা প্রদান করা কাজটি সবচেয়ে দুর্বল ঈমানের পরিচয়। "}
                 Reference={"সহিহ বুখারী, হাদিস নং ৬০৮৬"}
-                bgcolor={"#DBD8D4"} />
+               />
+                 <QuoteCard QuotesTitle={" নিষেধ "} 
+                Quote={" তোমাদের যে কোন ব্যক্তি যে কোন অন্যায় কাজ দেখবে সে যেন তা বল প্রয়োগে বাধা প্রদান করে। এভাবে সম্ভব না হলে মুখে বাধা প্রদান করবে। সম্ভব না হলে সে অন্যায়কে ঘৃণা করবে। আর অন্তরে ঘৃণা করে বাধা প্রদান করা কাজটি সবচেয়ে দুর্বল ঈমানের পরিচয়। "}
+                Reference={"সহিহ বুখারী, হাদিস নং ৬০৮৬"}
+               />
+
+<DuaCard
+           iconName={'book'}
+            iconSize={36}
+            iconColor={"yellow"}
+            reference={"(সূরা আরাফ, আয়াত: ১৫৬)"}
+            title={"কুরআন এর আয়াত "}
+            arabic={"وَرَحْمَتِي وَسِعَتْ كُلَّ شَيْءٍ"}
+            //english={"Allahumma la sahla illama ja'altahu sahla, wa anta taj'aa lul hazna eja shi'ta sahla"}
+           // bangla={"ইয়া মুক্বাল্লিবাল ক্বুলূব! সাব্বিত ক্বালবী ‘আলা দীনিকা"}
+            meaning={"অর্থ: আমার রহমত সব বস্তুকে আবৃত করে আছে।"}
+            //reference={"ইবনে মাজাহ  ১/৩৩৫ "}
+          //  onPress={() => console.log("DuaCard9")}
+          />
                 
      
         
      <NameCard2
      arabic={"ٱلْمُصَوِّرُ"}
       bangla={"আল-মুসাওয়ির	"}
-      meaning={"যিনি সমস্ত সৃষ্টিজগত সৃজন করেছেন, তিনি পূর্ব আকৃতি ব্যতীত এগুলোকে সৃষ্টি করেছেন  "}/>
+      meaning={"যিনি সমস্ত সৃষ্টিজগত সৃজন করেছেন, তিনি পূর্ব আকৃতি ব্যতীত এগুলোকে সৃষ্টি করেছেন  "}
+      onPress={() => navigation.navigate('AsmaulHusna')}/>
 
     
       
@@ -112,7 +137,8 @@ export default function Dashboard() {
         arabic={"الْحَشْر"}
         bangla={"আল-হাশর"}
         meaning={"সমাবেশ"}
-        reference={"আয়াতঃ ২৪ মাদানী "}/>
+        reference={"আয়াতঃ ২৪ মাদানী "}
+        onPress={()=> navigation.navigate('SurahList')}/>
 
         <DuaCard2
         title={"ঘুম থেকে উঠার পর দুআ "}
@@ -121,11 +147,6 @@ export default function Dashboard() {
         reference={"(বুখারি, হাদিস : ৬৩২৪) (মুসলিম, হাদিস : ২৭১১)"}
         />
 
-       
-        
-
-
-       
       
     </ScrollView>
   );

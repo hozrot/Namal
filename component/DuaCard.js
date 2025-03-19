@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 export default function DuaCard({ title, arabic,bangla,english,meaning,reference, onPress, date, iconName, iconSize, amount,category,backgroundColor='#7FC56C',
     iconColor = 'green' }) {
     return (
-       <TouchableOpacity style={styles.card} onPress={onPress}>
+       <View style={styles.card}>
                <View style={styles.header}>
                <MaterialCommunityIcons name={iconName} size={iconSize} color={iconColor} />
                  <View style={{ flex: 1, paddingLeft: 20 }}>
@@ -16,7 +16,7 @@ export default function DuaCard({ title, arabic,bangla,english,meaning,reference
                  </TouchableOpacity>
                 
                </View>
-               <View style={styles.ItemBody}>
+               <TouchableOpacity style={styles.ItemBody}>
                  <View style={styles.ItemContent}>
                    <Text style={styles.Arabic}>
                      {arabic}
@@ -36,7 +36,7 @@ export default function DuaCard({ title, arabic,bangla,english,meaning,reference
                  <View style={styles.ItemContent}>
                   <Text style={styles.Meaning}> {meaning}</Text>
                  </View>
-               </View>
+               </TouchableOpacity>
                {/* <View style={styles.ItemFooter}>
                 <TouchableOpacity>
                 <Text> Details.. </Text>
@@ -48,7 +48,7 @@ export default function DuaCard({ title, arabic,bangla,english,meaning,reference
                 </TouchableOpacity>
 
                </View> */}
-             </TouchableOpacity>
+             </View>
     );
 }
 
@@ -59,6 +59,12 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: "lightblue",
         margin: 10,
+        borderRadius: 15,
+        padding: 10,
+        borderWidth: 2,
+        borderColor: "black",
+        shadowColor: "black",
+        shadowOffset: { width: 0, height: 2 },
       },
     header: {
         flex: 0.1,

@@ -4,14 +4,14 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 export default function SurahCard({ serial,name, title, arabic,bangla,english,meaning,reference, onPress, date, iconName, iconSize, amount,category,backgroundColor='#7FC56C',
     iconColor = 'green' }) {
     return (
-       <TouchableOpacity style={styles.card} onPress={onPress}>
+       <TouchableOpacity style={styles.card} onPress={onPress} >
          <View style={{justifyContent:'center',alignItems:'center',backgroundColor:'#DBD8D4',borderRadius:15,margin:10,padding:10}}>
               <View style={{padding:5,textAlign:'center',justifyContent:'center',alignItems:'center',backgroundColor:'#7FCEAA',borderRadius:35,borderWidth:1,borderColor:'white'}}>
                 <Text  style={{ fontSize:14,color:'black',padding:5,textAlign:'center'}}> {serial} </Text>
                 </View>
                  {/* <Text style={{fontSize:16 , fontWeight:'bold'}} >  সূরা পরিচিতি </Text> */}
                  
-             <TouchableOpacity style={{flex:1,flexDirection:"row"}}>
+             <View style={{flex:1,flexDirection:"row"}}>
                    <View style={{flex:.4,justifyContent:'center',alignItems:'flex-end'}}>
                    {/* <Text style={{fontSize:24}}>Ar-Rahman </Text> */}
                    <Text style={{fontSize:24 , fontWeight:'bold'}}> {bangla}  </Text>
@@ -23,7 +23,7 @@ export default function SurahCard({ serial,name, title, arabic,bangla,english,me
                    <Text style={{fontSize:42,color:'red',textAlign:'center'}}> {arabic} </Text>
                    <Text style={{fontSize:14,textAlign:'center'}}> {reference} </Text>
                     </View>
-                </TouchableOpacity>
+                </View>
             </View>
              </TouchableOpacity>
     );

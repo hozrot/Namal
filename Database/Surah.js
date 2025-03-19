@@ -499,16 +499,7 @@ const surahs = [
         ruku: 3,
         meccan: true,
       },
-  {
-    id: 50,
-    arabic: 'ق',
-    english: 'Qaf',
-    bangla: 'ক্বাফ',
-    meaning: 'আরবি বর্ণ ক্বাফ',
-    ayah: 45,
-    ruku: 3,
-    meccan: true,
-  },
+  
   {
     id: 51,
     arabic: 'الذّاريات',
@@ -1151,3 +1142,4 @@ const surahs = [
     meccan: true,
   },
 ];
+export default surahs;
