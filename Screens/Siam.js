@@ -1,24 +1,40 @@
 import React from 'react';
 import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+const Tab = createMaterialTopTabNavigator();
+
+import SiamDetails from './SiamDetails';
+import SiamRules from './SiamRules';
+import SiamOthers from './SiamOthers';
+
 export default function Siam({}) {
     return (
-    <View style={styles.container}>
-         <Text> ফরয  </Text>
-               <Text> নফল  </Text>
-               <Text> সুন্নাত  </Text>
-               <Text> গুরুত্ব  </Text>
-               <Text> নিয়ম   </Text>
-                <Text> আমল   </Text>
-                <Text> দোয়া    </Text>
-                <Text> ............   </Text>
-                <Text> ইফতার     </Text>
-                <Text> সেহরি    </Text>
-               
-
-
-
-    </View>
+    
+    <Tab.Navigator>
+    <Tab.Screen
+     name="Two"
+     component={SiamDetails}
+     options={{
+       tabBarLabel: "রোজা",
+     }}
+    />
+    <Tab.Screen
+     name="Three"
+     component={SiamRules}
+     options={{
+       tabBarLabel: "নিয়ম",
+     }}
+    />
+    <Tab.Screen
+     name="Four"
+     component={SiamOthers}
+     options={{
+       tabBarLabel: " অন্যান্য",
+     }}
+    />
+    
+    </Tab.Navigator>
     );
 }
 

@@ -1,15 +1,28 @@
 import React from 'react';
 import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import JakatDetails from './JakatDetails';
+const Tab = createMaterialTopTabNavigator();
+
+
 export default function Jakat({}) {
     return (
-    <View style={styles.container}>
-        <Text> Jakat </Text>
-        <Text> নিয়ম  </Text>
-        <Text> হিসাব  </Text>
-        <Text> আমল   </Text>
-        <Text> গুরুত্ব  </Text>
-    </View>
+  
+    <Tab.Navigator>
+             
+             
+    <Tab.Screen
+     name="one"
+     component={JakatDetails}
+     options={{
+       tabBarLabel: "যাকাত",
+     }}
+    />
+   
+  
+    
+    </Tab.Navigator>
     );
 }
 

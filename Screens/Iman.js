@@ -1,14 +1,26 @@
 import React from 'react';
 import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import ImanDetails from './ImanDetails';
+const Tab = createMaterialTopTabNavigator();
+
 export default function Iman({}) {
     return (
-    <View style={styles.container}>
-        <Text> Iman </Text>
-        <Text> বিশ্বাস  </Text>
-        <Text> কালেমা  </Text>
-        <Text> ইমান  </Text>
-    </View>
+    
+    <Tab.Navigator>
+             
+             
+    <Tab.Screen
+     name="one"
+     component={ImanDetails}
+     options={{
+       tabBarLabel: "বিশ্বাস",
+     }}
+    />
+   
+   
+    </Tab.Navigator>
     );
 }
 

@@ -1,16 +1,42 @@
 import React from 'react';
 import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import HajjDetails from './HajjDetails';
+import Omrah from './Omrah';
+import HajjOthers from './HajjOthers';
+const Tab = createMaterialTopTabNavigator();
+
 export default function Hajj({}) {
     return (
-    <View style={styles.container}>
-        <Text> Hajj </Text>
-        <Text> হজ্জ  </Text>
-        <Text> ওমরাহ  </Text>
-        <Text> নিয়ম   </Text>
-        <Text> সময়   </Text>
-        <Text> গুরুতব   </Text>
-    </View>
+   
+    <Tab.Navigator>
+             
+             
+    <Tab.Screen
+     name="one"
+     component={HajjDetails}
+     options={{
+       tabBarLabel: "হজ্জ",
+     }}
+    />
+    <Tab.Screen
+     name="Two"
+     component={Omrah}
+     options={{
+       tabBarLabel: " ওমরাহ ",
+     }}
+    />
+   
+    <Tab.Screen
+     name="Four"
+     component={HajjOthers}
+     options={{
+       tabBarLabel: " অন্যান্য",
+     }}
+    />
+    
+    </Tab.Navigator>
     );
 }
 
