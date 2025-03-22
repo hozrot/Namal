@@ -119,25 +119,23 @@ export default function Dashboard({ navigation }) {
       
       
       <DuaCard
-           iconName={'book-open-variant'}
-            iconSize={36}
-            iconColor={"tomato"}
-            title={"ঈমান ঠিক রাখার আমল "}
+            image={require('../assets/dua.png')}
+            title={"ঈমান ঠিক রাখার দোয়া  "}
             arabic={"يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلٰي دِيْنِكَ"}
             //english={"Allahumma la sahla illama ja'altahu sahla, wa anta taj'aa lul hazna eja shi'ta sahla"}
             bangla={"ইয়া মুক্বাল্লিবাল ক্বুলূব! সাব্বিত ক্বালবী ‘আলা দীনিকা"}
             meaning={"অর্থ: হে অন্তরসমূহের পরিবর্তনকারী! আপনি আমার অন্তরকে আপনার দ্বীনের (ইসলামের) উপর অটল রাখুন।"}
-            //reference={"ইবনে মাজাহ  ১/৩৩৫ "}
+            reference={"সুনানে তিরমিযী, হাদিস নম্বর: ৩৫২২ "}
           //  onPress={() => console.log("DuaCard9")}
           />
      
      {/* <EventList listName={"Upcoming Event" } eventName={"Eid ul Fitr"} daysRemaining={43} day={5} month={"April"} /> */}
       
-     <QuoteCard QuotesTitle={" পরামর্শ"} 
+     {/* <QuoteCard QuotesTitle={" পরামর্শ"} 
      titelColor={"green"}
                 Quote={" তোমাদের যে কোন ব্যক্তি যে কোন অন্যায় কাজ দেখবে সে যেন তা বল প্রয়োগে বাধা প্রদান করে। এভাবে সম্ভব না হলে মুখে বাধা প্রদান করবে। সম্ভব না হলে সে অন্যায়কে ঘৃণা করবে। আর অন্তরে ঘৃণা করে বাধা প্রদান করা কাজটি সবচেয়ে দুর্বল ঈমানের পরিচয়। "}
                 Reference={"সহিহ বুখারী, হাদিস নং ৬০৮৬"}
-               />
+               /> */}
                  <QuoteCard QuotesTitle={" নিষেধ "} 
                  titelColor={"red"}
                 Quote={" তোমাদের যে কোন ব্যক্তি যে কোন অন্যায় কাজ দেখবে সে যেন তা বল প্রয়োগে বাধা প্রদান করে। এভাবে সম্ভব না হলে মুখে বাধা প্রদান করবে। সম্ভব না হলে সে অন্যায়কে ঘৃণা করবে। আর অন্তরে ঘৃণা করে বাধা প্রদান করা কাজটি সবচেয়ে দুর্বল ঈমানের পরিচয়। "}
@@ -145,9 +143,7 @@ export default function Dashboard({ navigation }) {
                />
 
 <DuaCard
-           iconName={'book'}
-            iconSize={36}
-            iconColor={"yellow"}
+           image={require('../assets/quran.png')}
             reference={randomAya.reference}
             title={"কুরআন এর আয়াত "}
             arabic={randomAya.arabic}
@@ -173,11 +169,12 @@ export default function Dashboard({ navigation }) {
         meaning={randomSurah.meaning}
         reference={randomSurah.meccan ? 'মক্কী ' : 'মাদীনি'}
         aya={convertToBanglaNumber(randomSurah.ayah)}
-      
+        menuImage={randomSurah.meccan ? require('../assets/mecca.png') :require('../assets/madina.png')}
         onPress={()=> navigation.navigate('SurahList')}/>
 
         <DuaCard2
         title={"ঘুম থেকে উঠার পর দুআ "}
+        arabic={"اَلْحَمْدُ لِلّٰهِ الَّذِیْۤ اَحْیَانَا بَعْدَ مَاۤ اَمَاتَنَا وَ اِلَیْهِ النُّشُوْرُ"}
         bangla={"‘আলহামদুলিল্লা হিল্লাজি আহইয়ানা বা’দা মা আমাতানা ওয়া ইলাইহিন নুশুর’"}
         meaning={"অর্থ : সমস্ত প্রশংসা আল্লাহর জন্য, যিনি আমাদের মৃত করার পর পুনরায় জীবিত করেছেন। আর তার দিকেই সবার পুনরুত্থান। "}
         reference={"(বুখারি, হাদিস : ৬৩২৪) (মুসলিম, হাদিস : ২৭১১)"}

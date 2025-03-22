@@ -10,7 +10,7 @@ export default function DuaCard2({ title, arabic,bangla,english,meaning,referenc
                         <Text style={{fontSize:24 ,color:'green', fontWeight:'bold',paddingTop:20}}> {title} </Text>
                         </View>
                         <View style={{flex:.4,justifyContent:'center',alignItems:'center',padding:5}}>
-                        <Text style={{fontSize:30 , color:'#723419',textAlign:'center',fontWeight:'bold'}}>الحمدُ لله الذي أحيَانَا بَعْدَ مَا أماتَنَا وإليه النُّشُوْر </Text>
+                        <Text style={{fontSize:30 , color:'#723419',textAlign:'center',fontWeight:'bold'}}>{arabic} </Text>
                         </View>
                         <View style={{flex:.2,padding:5, width:'100%',justifyContent:'center',alignItems:'center'}}>
                         <Text style={{fontSize:20 , color:'#723419',textAlign:'center',}}> {bangla} </Text>

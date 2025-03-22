@@ -1,12 +1,15 @@
 import React from 'react';
 import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-export default function DuaCard({ title, arabic,bangla,english,meaning,reference, onPress, date, iconName, iconSize, amount,category,backgroundColor='#7FC56C',
+export default function DuaCard({ title,image, arabic,bangla,english,meaning,reference, onPress, date, iconName, iconSize, amount,category,backgroundColor='#7FC56C',
     iconColor = 'green' }) {
     return (
        <View style={styles.card}>
                <View style={styles.header}>
-               <MaterialCommunityIcons name={iconName} size={iconSize} color={iconColor} />
+              <Image
+                 source={image}
+                 style={{ width: 40, height: 40, }}
+               />
                  <View style={{ flex: 1, paddingLeft: 20 }}>
                    <Text style={{fontSize:16,fontWeight:'bold'}}> {title} </Text>
                    <Text style={{fontSize:12,fontWeight:'semibold'}}> {reference} </Text>

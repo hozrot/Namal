@@ -95,7 +95,7 @@ export default function AsmaulHusna({onPress,bangla}) {
                         {item.details}{" "}
                       </Text>
                     </View>
-                  </View>
+          </View>
         </View>
       ))}
           </PagerView>

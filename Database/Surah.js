@@ -324,7 +324,7 @@ const surahs = [
         arabic: 'الْأحزاب',
         english: 'Al-Ahzab',
         bangla: 'আল আহ্‌যাব',
-        meaning: 'জোট',
+        meaning: 'জোট বা দলসমূহ',
         ayah: 73,
         ruku: 9,
         meccan: false,
