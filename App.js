@@ -8,6 +8,7 @@ import Siam from "./Screens/Siam";
 import Jakat from "./Screens/Jakat";
 import Hajj from "./Screens/Hajj";
 import Iman from "./Screens/Iman";
+import DuaByProphetList from "./Screens/DuaByPhophetList";
 
 
 const Stack = createNativeStackNavigator();
@@ -25,6 +26,7 @@ export default function App() {
         <Stack.Screen name="Jakat" component={Jakat}  />
         <Stack.Screen name="Hajj" component={Hajj}  />
         <Stack.Screen name="Iman" component={Iman}  />
+        <Stack.Screen name="DuaByProphetList" component={DuaByProphetList}  />
         
        
       </Stack.Navigator>

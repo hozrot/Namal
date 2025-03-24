@@ -5,7 +5,7 @@ export default function QuoteCard({
     QuotesTitle,
   Quote,
   Reference,
-  bgcolor="cream",
+  bgcolor,
   onPress,
   titelColor,
   iconColor = "green",
