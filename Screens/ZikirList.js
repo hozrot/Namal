@@ -1,26 +1,27 @@
 import React from 'react';
 import { StyleSheet, Text, View, FlatList, SafeAreaView,ScrollView,TouchableOpacity } from 'react-native';
 import DuaCard from '../component/DuaCard';
-import { duaByPhophet } from '../Database/DuaByProphet';
+import zikrs from '../Database/Zikir';
 
 
-export default function DuaByProphetList() {
+export default function ZikirList() {
  
   return (
  <View style={{flex:1,backgroundColor:'indigo'}}>
      
       <FlatList
-        data={duaByPhophet}
+        data={zikrs}
         keyExtractor={item => item.id}
         renderItem={({ item }) => (
 
          <DuaCard
-        title={item.title}
+         image={require("../assets/beads.png")}
+         title={" জিকির "}
         arabic={item.arabic}
         bangla={item.bangla}
         meaning={item.meaning}
         reference={item.reference}
-       image={item.image}
+       
        />
         )}
       />

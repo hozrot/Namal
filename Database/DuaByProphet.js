@@ -1,6 +1,7 @@
 export const duaByPhophet = [
   {
     id: 1,
+    image: require("../assets/adam.jpeg"),
     reference: "(সুরা আরাফ: ২৩)",
     title: "আদম (আ.)-এর দোয়া",
     arabic:
@@ -12,6 +13,7 @@ export const duaByPhophet = [
   },
   {
     id: 2,
+    image: require("../assets/yunus.jpeg"),
     reference: "(সুরা আম্বিয়া: ৮৭)",
     title: " ইউনুস (আ.)-এর দোয়া",
     arabic:
@@ -22,6 +24,7 @@ export const duaByPhophet = [
   },
   {
     id: 3,
+    image: require("../assets/musa.jpeg"),
     reference: "(সুরা কাসাস: ১৬)",
     title: "মুসা (আ.)-এর দোয়া",
     arabic: "رَبِّ إِنِّي ظَلَمْتُ نَفْسِي فَاغْفِرْ لِي",
@@ -31,6 +34,7 @@ export const duaByPhophet = [
   },
   {
     id: 4,
+    image: require("../assets/suleiman.jpeg"),
     reference: "(সুরা নামল: ১৯)",
     title: "সোলায়মান (আ.)-এর দোয়া",
     arabic:
@@ -43,6 +47,7 @@ export const duaByPhophet = [
 
   {
     id: 5,
+    image: require("../assets/zakaria.jpeg"),
     reference: "(সুরা আম্বিয়া: ৮৯)",
     title: "জাকারিয়া (আ.)-এর দোয়া",
     arabic: "رَبِّ لَا تَذَرْنِي فَرْدًا وَأَنتَ خَيْرُ الْوَارِثِينَ",
@@ -52,6 +57,7 @@ export const duaByPhophet = [
   },
   {
     id: 6,
+    image: require("../assets/ayuub.jpeg"),
     reference: "(সুরা আম্বিয়া: ৮৩)",
     title: "আইয়ুব (আ.)-এর দোয়া",
     arabic: "رَبَّهُ أَنِّي مَسَّنِيَ الضُّرُّ وَأَنْتَ أَرْحَمُ الرَّاحِمِينَ",
@@ -60,6 +66,7 @@ export const duaByPhophet = [
   },
   {
     id: 7,
+    image: require("../assets/nuh.jpeg"),
     reference: "(সুরা মুমিনুন: ২৬)",
     title: "নুহ (আ.)-এর দোয়া",
     arabic: "رَبِّ انۡصُرۡنِیۡ بِمَا کَذَّبُوۡنِ",
@@ -70,6 +77,7 @@ export const duaByPhophet = [
 
   {
     id: 8,
+    image: require("../assets/shuiab.jpeg"),
     reference: "(সুরা আরাফ: ৮৯)",
     title: "শোয়াইব (আ.)-এর দোয়া",
     arabic:
@@ -81,6 +89,7 @@ export const duaByPhophet = [
   },
   {
     id: 9,
+    image: require("../assets/ibrahim.jpeg"),
     reference: "(সুরা ইবরাহিম: ৩৫)",
     title: "ইবরাহিম (আ.)-এর দোয়া",
     arabic:
@@ -93,6 +102,7 @@ export const duaByPhophet = [
 
   {
     id: 10,
+    image: require("../assets/daud.jpeg"),
     reference: "(সুরা বাকারা: ২৫০)",
     title: "দাউদ (আ.)-এর দোয়া",
     arabic:
@@ -104,6 +114,7 @@ export const duaByPhophet = [
   },
   {
     id: 11,
+    image: require("../assets/lut.png"),
     reference: "(সুরা শুআরা: ১৬৯)",
     title: "লুত (আ.)-এর দোয়া",
     arabic: "رَبِّ نَجِّنِي وَأَهْلِي مِمَّا يَعْمَلُونَ",
@@ -114,6 +125,7 @@ export const duaByPhophet = [
 
   {
     id: 12,
+    image: require("../assets/cloudy.png"),
     reference: "(সুরা ইউসুফ: ৮৬)",
     title: "ইয়াকুব (আ.)-এর দোয়া",
     arabic: "اِنَّمَاۤ اَشۡکُوۡا بَثِّیۡ وَ حُزۡنِیۡۤ اِلَی اللّٰهِ",
@@ -121,24 +133,8 @@ export const duaByPhophet = [
     meaning: "আমি আমার অসহনীয় বেদনা, আমার দুঃখ শুধু আল্লাহর কাছে নিবেদন করছি।",
   },
   {
-    id: 14,
-    reference: "(সুরা সাফফাত: ৩৭)",
-    title: "ইবরাহিম (আ.)-এর দোয়া",
-    arabic: "رَبِّ هَبۡ لِیۡ مِنَ الصّٰلِحِیۡنَ",
-    bangla: "রাব্বি হাবলী মিনাস সালিহীন",
-    meaning: "হে আমার রব! আমাকে এক সত্কর্মপরায়ণ সন্তান দান করুন।",
-  },
-  {
-    id: 15,
-    reference: "(সুরা আনকাবুত: ৩০)",
-    title: "লুত (আ.)-এর দোয়া",
-    arabic: "رَبِّ انۡصُرۡنِیۡ عَلَی الۡقَوۡمِ الۡمُفۡسِدِیۡنَ",
-    bangla: "রাব্বিনসুরনী আলাল ক্বাওমিল মুফসিদীন",
-    meaning:
-      "হে আমার রব! আমাকে বিপর্যয় সৃষ্টিকারী সম্প্রদায়ের বিরুদ্ধে সাহায্য করুন।",
-  },
-  {
     id: 13,
+    image: require("../assets/nuh.jpeg"),
     reference: "(সুরা হুদ: ৪৭)",
     title: "নুহ (আ.)-এর দোয়া",
     arabic:
@@ -150,6 +146,27 @@ export const duaByPhophet = [
   },
   {
     id: 14,
+    image: require("../assets/ibrahim.jpeg"),
+    reference: "(সুরা সাফফাত: ৩৭)",
+    title: "ইবরাহিম (আ.)-এর দোয়া",
+    arabic: "رَبِّ هَبۡ لِیۡ مِنَ الصّٰلِحِیۡنَ",
+    bangla: "রাব্বি হাবলী মিনাস সালিহীন",
+    meaning: "হে আমার রব! আমাকে এক সত্কর্মপরায়ণ সন্তান দান করুন।",
+  },
+  {
+    id: 15,
+    image: require("../assets/lut.png"),
+    reference: "(সুরা আনকাবুত: ৩০)",
+    title: "লুত (আ.)-এর দোয়া",
+    arabic: "رَبِّ انۡصُرۡنِیۡ عَلَی الۡقَوۡمِ الۡمُفۡسِدِیۡنَ",
+    bangla: "রাব্বিনসুরনী আলাল ক্বাওমিল মুফসিদীন",
+    meaning:
+      "হে আমার রব! আমাকে বিপর্যয় সৃষ্টিকারী সম্প্রদায়ের বিরুদ্ধে সাহায্য করুন।",
+  },
+  
+  {
+    id: 16,
+    image: require("../assets/yusuf.jpeg"),
     reference: "(সুরা ইউসুফ: ১০১)",
     title: "ইউসুফ (আ.)-এর দোয়া",
     arabic:
@@ -160,7 +177,8 @@ export const duaByPhophet = [
       " অর্থ: ‘হে আমার রব! আপনি আমাকে রাজ্য দান করেছেন এবং স্বপ্নের ব্যাখ্যা শিক্ষা দিয়েছেন। হে আকাশমণ্ডলী ও পৃথিবীর স্রষ্টা! আপনিই ইহলোক ও পরলোকে আমার অভিভাবক। আপনি আমাকে সত্কর্মপরায়ণদের অন্তর্ভুক্ত করুন।’",
   },
   {
-    id: 15,
+    id: 17,
+    image: require("../assets/isa.jpeg"),
     reference: "(সুরা মায়িদা: ১১৪)",
     title: "ঈসা (আ.)-এর দোয়া",
     arabic:
@@ -171,7 +189,8 @@ export const duaByPhophet = [
       "অর্থ: ‘হে আল্লাহ! আমাদের রব! আমাদের জন্য আসমান থেকে খাদ্যপূর্ণ খাঞ্চা প্রেরণ করুন। এটা আমাদের ও আমাদের পূর্ববর্তী ও পরবর্তী সবার জন্য হবে আনন্দোৎসবস্বরূপ এবং আপনার কাছ থেকে নিদর্শন। আর আমাদের জীবিকা দান করুন; আপনিই তো শ্রেষ্ঠ জীবিকাদাতা।’",
   },
   {
-    id: 16,
+    id: 18,
+    image: require("../assets/isa.jpeg"),
     reference: "(সুরা মায়িদা: ১১৮)",
     title: "ঈসা (আ.)-এর দোয়া",
     arabic:
@@ -182,7 +201,8 @@ export const duaByPhophet = [
       "অর্থ: ‘যদি আপনি তাদেরকে শাস্তি দেন, তবে তারা আপনার দাস এবং যদি আপনি তাদেরকে ক্ষমা করেন, তবে আপনিই পরাক্রান্ত, মহাবিজ্ঞ।’ ",
   },
   {
-    id: 17,
+    id: 19,
+    image: require("../assets/mohammad.jpeg"),
     reference: "(সুরা বাকারা: ২০১)",
     title: "মুহাম্মদ (স.)-এর দোয়া",
     arabic: "رَبَّنَاۤ اٰتِنَا فِی الدُّنۡیَا حَسَنَۃً وَّ فِی الۡاٰخِرَۃِ حَسَنَۃً وَّ قِنَا عَذَابَ النَّارِ",
@@ -191,7 +211,8 @@ export const duaByPhophet = [
       "অর্থ: ‘হে আমাদের রব! আমাদের পৃথিবীতে কল্যাণ দান করুন এবং পরকালেও কল্যাণ দান করুন। আর আমাদের রক্ষা করুন জাহান্নামের শাস্তি থেকে।’",
   },
   {
-    id: 18,
+    id: 20,
+    image: require("../assets/mohammad.jpeg"),
     reference: "(সুরা বনি ইসরাঈল: ৮০)",
     title: "মুহাম্মদ (স.)-এর দোয়া",
     arabic:
@@ -202,7 +223,8 @@ export const duaByPhophet = [
       "অর্থ: হে পালনকর্তা! আমাকে দাখিল করুন সত্যরূপে এবং আমাকে বের করুন সত্যরূপে এবং  দান করুন আমাকে নিজের কাছ থেকে রাষ্ট্রীয় সাহায্য।’",
   },
   {
-    id: 19,
+    id: 21,
+    image: require("../assets/mohammad.jpeg"),
     reference: "(সুরা মুমিনুন: ৯৪)",
     title: "মুহাম্মদ (স.)-এর দোয়া",
     arabic: "رَبِّ فَلَا تَجْعَلْنِي فِي الْقَوْمِ الظَّالِمِينَ",

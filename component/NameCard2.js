@@ -41,10 +41,12 @@ export default function NameCard2({
   return (
     <View
       style={{
-        backgroundColor: "#E9FDF1",
-        padding: 5,
+        backgroundColor: "#C9FADC",
+        padding: 10,
         margin: 10,
         borderRadius: 15,
+        borderWidth: 2,
+       
       }}
     >
       <ViewShot ref={cardRef} options={{ format: "png", quality: 0.8 }}>
@@ -55,6 +57,8 @@ export default function NameCard2({
             backgroundColor: "#C9FADC",
             borderRadius: 15,
             margin: 5,
+            
+            
           }}
         >
           <View

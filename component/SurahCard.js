@@ -6,8 +6,8 @@ export default function SurahCard({ serial,name,aya,menuImage, title, arabic,ban
     return (
        <TouchableOpacity style={styles.card} onPress={onPress} >
          <View style={{justifyContent:'center',alignItems:'center',backgroundColor:'thistle',borderRadius:15,margin:10,padding:10}}>
-              <View style={{padding:5,textAlign:'center',justifyContent:'center',alignItems:'center',backgroundColor:'#7FCEAA',borderRadius:35,borderWidth:1,borderColor:'white',flexDirection:'row'}}>
-                <Text  style={{ fontSize:14,color:'black',padding:5,textAlign:'center'}}> {serial} </Text>
+              <View style={{padding:3,textAlign:'center',justifyContent:'center',alignItems:'center',backgroundColor:'#D396FF',borderRadius:35,borderWidth:1,borderColor:'white',flexDirection:'row'}}>
+                <Text  style={{ fontSize:20,color:'black',textAlign:'center',fontWeight:'bold'}}> {serial} </Text>
                 <Image
                           source={menuImage}
                           style={{ width: 40, height: 40 ,borderRadius:35,resizeMode:'contain' }}

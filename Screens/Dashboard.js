@@ -23,6 +23,7 @@ import { ayaList } from "../Database/QuranAyat";
 import asmaulHusna from "../Database/Name";
 import surahs from "../Database/Surah";
 import { duaByPhophet } from "../Database/DuaByProphet";
+import zikrs from "../Database/Zikir";
 
 function convertToBanglaNumber(number) {
   const banglaNumbers = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
@@ -49,12 +50,17 @@ export const getRandomSurah = () => {
   const randomIndex = Math.floor(Math.random() * surahs.length);
   return surahs[randomIndex];
 };
+export const getRandomZikir = () => {
+  const randomIndex = Math.floor(Math.random() * zikrs.length);
+  return zikrs[randomIndex];
+};
 
 export default function Dashboard({ navigation }) {
   const [randomDuaByPhophet, setRandomDuaByPhophet] = useState(getRandomDuaByPhophet());
   const [randomAya, setRandomAya] = useState(getRandomAya());
   const [randomName, setRandomName] = useState(getRandomName());
   const [randomSurah, setRandomSurah] = useState(getRandomSurah());
+  const [randomZikir, setRandomZikir] = useState(getRandomZikir());
 
   useEffect(() => {
     // প্রতিবার কম্পোনেন্ট মাউন্ট হওয়ার সময় নতুন র্যান্ডম
@@ -62,10 +68,11 @@ export default function Dashboard({ navigation }) {
     setRandomDuaByPhophet(getRandomDuaByPhophet());
     setRandomName(getRandomName());
     setRandomSurah(getRandomSurah());
+    setRandomZikir(getRandomZikir());
   }, []);
 
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: "#7FCEAA" }}>
+    <ScrollView style={{ flex: 1, backgroundColor: "indigo" }}>
       <View style={styles.Topcontainer}>
         <Text style={{ fontSize: 18, fontWeight: "bold", color: "Black" }}>
           {" "}
@@ -111,10 +118,11 @@ export default function Dashboard({ navigation }) {
         />
       </ScrollView>
 
+      
       <View
         style={{
           flexDirection: "row",
-          backgroundColor: "#40CC83",
+          backgroundColor: "#871F78",
           borderRadius: 35,
           margin: 10,
         }}
@@ -126,7 +134,7 @@ export default function Dashboard({ navigation }) {
             textAlign: "center",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "#7FCEAA",
+            backgroundColor: "purple",
             borderRadius: 35,
             borderWidth: 1,
             borderColor: "white",
@@ -185,6 +193,17 @@ export default function Dashboard({ navigation }) {
           </Text>
         </View>
       </View>
+      <DuaCard
+        image={require("../assets/beads.png")}
+        title={" জিকির "}
+        reference={randomZikir.reference}
+       
+        arabic={randomZikir.arabic}
+        bangla={randomZikir.bangla}
+        meaning={randomZikir.meaning}
+        bgcolor={"#BfF9E6"}
+        onPress={()=> navigation.navigate("ZikirList")}
+      />
 
       <DirectionCard distence={"2 KM"} />
 
@@ -198,7 +217,7 @@ export default function Dashboard({ navigation }) {
           "অর্থ: হে অন্তরসমূহের পরিবর্তনকারী! আপনি আমার অন্তরকে আপনার দ্বীনের (ইসলামের) উপর অটল রাখুন।"
         }
         reference={"সুনানে তিরমিযী, হাদিস নম্বর: ৩৫২২ "}
-        bgcolor={"yellowgreen"}
+        bgcolor={"lightblue"}
         //  onPress={() => console.log("DuaCard9")}
       />
 
@@ -226,8 +245,9 @@ export default function Dashboard({ navigation }) {
         arabic={randomAya.arabic}
         bangla={randomAya.bangla}
         meaning={randomAya.meaning}
-        bgcolor={"springgreen"}
+        bgcolor={"#BfF9E6"}
       />
+
 
       <NameCard2
         arabic={randomName.arabic}
@@ -236,7 +256,8 @@ export default function Dashboard({ navigation }) {
         onPress={() => navigation.navigate("AsmaulHusna")}
       />
       <DuaCard
-        image={require("../assets/islam2.png")}
+         image={randomDuaByPhophet.image}
+        //imageBack={randomDuaByPhophet.image}
         reference={randomDuaByPhophet.reference}
         title={randomDuaByPhophet.title}
         arabic={randomDuaByPhophet.arabic}

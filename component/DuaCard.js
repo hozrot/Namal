@@ -1,24 +1,29 @@
 import React from 'react';
-import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Image, Text, TouchableOpacity,ImageBackground } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-export default function DuaCard({ bgcolor, title,image, arabic,bangla,english,meaning,reference, onPress, date, iconName, iconSize, amount,category,backgroundColor='#7FC56C',
+import { BlurView } from 'expo-blur';
+export default function DuaCard({ bgcolor, title,image, imageBack,arabic,bangla,english,meaning,reference, onPress, date, iconName, iconSize, amount,category,backgroundColor='#7FC56C',
     iconColor = 'green' }) {
     return (
        <View style={{flex: 1,
         backgroundColor: bgcolor,
         margin: 10,
         borderRadius: 15,
-        padding: 10,
+        overflow:'hidden',
+      
         borderWidth: 2,
         borderColor: "black",}}>
+                <ImageBackground  source={imageBack} style={{width: 'auto', height:'auto'}} resizeMode='contain'>
+                <BlurView intensity={100}>
                <View style={styles.header}>
               <Image
                  source={image}
-                 style={{ width: 40, height: 40, }}
+                 style={{ width: 40, height: 40,borderRadius:5 }}
+                 
                />
                  <View style={{ flex: 1, paddingLeft: 20 }}>
-                   <Text style={{fontSize:16,fontWeight:'bold'}}> {title} </Text>
-                   <Text style={{fontSize:12,fontWeight:'semibold'}}> {reference} </Text>
+                   <Text style={{fontSize:18,fontWeight:'bold'}}> {title} </Text>
+                   <Text style={{fontSize:16,fontWeight:'semibold'}}> {reference} </Text>
                  </View>
                  {/* <TouchableOpacity>
                      <MaterialCommunityIcons name="share-variant" size={24} color="black" />
@@ -56,15 +61,18 @@ export default function DuaCard({ bgcolor, title,image, arabic,bangla,english,me
                     <MaterialCommunityIcons name="arrow-right" size={20} color="black" />
                 </TouchableOpacity>
 
+
                </View> */}
+</BlurView>
+</ImageBackground>
              </View>
+             
     );
 }
 
 const styles = StyleSheet.create({
     card: {
         flex: 1,
-        backgroundColor: "lightblue",
         margin: 10,
         borderRadius: 15,
         padding: 10,
