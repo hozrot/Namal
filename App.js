@@ -10,6 +10,7 @@ import Hajj from "./Screens/Hajj";
 import Iman from "./Screens/Iman";
 import DuaByProphetList from "./Screens/DuaByPhophetList";
 import ZikirList from "./Screens/ZikirList";
+import DataList from "./Screens/DataList";
 
 
 const Stack = createNativeStackNavigator();
@@ -29,6 +30,7 @@ export default function App() {
         <Stack.Screen name="Iman" component={Iman}  />
         <Stack.Screen name="DuaByProphetList" component={DuaByProphetList}  />
         <Stack.Screen name="ZikirList" component={ZikirList}  />
+        <Stack.Screen name="DataList" component={DataList}  />
         
        
       </Stack.Navigator>

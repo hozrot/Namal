@@ -24,6 +24,7 @@ import asmaulHusna from "../Database/Name";
 import surahs from "../Database/Surah";
 import { duaByPhophet } from "../Database/DuaByProphet";
 import zikrs from "../Database/Zikir";
+import { dualist } from "../Database/Dua";
 
 function convertToBanglaNumber(number) {
   const banglaNumbers = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
@@ -33,6 +34,15 @@ function convertToBanglaNumber(number) {
     .map((digit) => banglaNumbers[parseInt(digit)])
     .join("");
 }
+
+export const getRandomZikir = () => {
+  const randomIndex = Math.floor(Math.random() * zikrs.length);
+  return zikrs[randomIndex];
+};
+export const getRandomDua = () => {
+  const randomIndex = Math.floor(Math.random() * dualist.length);
+  return dualist[randomIndex];
+};
 
 export const getRandomAya = () => {
   const randomIndex = Math.floor(Math.random() * ayaList.length);
@@ -50,10 +60,6 @@ export const getRandomSurah = () => {
   const randomIndex = Math.floor(Math.random() * surahs.length);
   return surahs[randomIndex];
 };
-export const getRandomZikir = () => {
-  const randomIndex = Math.floor(Math.random() * zikrs.length);
-  return zikrs[randomIndex];
-};
 
 export default function Dashboard({ navigation }) {
   const [randomDuaByPhophet, setRandomDuaByPhophet] = useState(getRandomDuaByPhophet());
@@ -61,6 +67,7 @@ export default function Dashboard({ navigation }) {
   const [randomName, setRandomName] = useState(getRandomName());
   const [randomSurah, setRandomSurah] = useState(getRandomSurah());
   const [randomZikir, setRandomZikir] = useState(getRandomZikir());
+  const [randomDua, setRandomDua] = useState(getRandomDua());
 
   useEffect(() => {
     // প্রতিবার কম্পোনেন্ট মাউন্ট হওয়ার সময় নতুন র্যান্ডম
@@ -69,16 +76,17 @@ export default function Dashboard({ navigation }) {
     setRandomName(getRandomName());
     setRandomSurah(getRandomSurah());
     setRandomZikir(getRandomZikir());
+    setRandomDua(getRandomDua());
   }, []);
 
   return (
     <ScrollView style={{ flex: 1, backgroundColor: "indigo" }}>
       <View style={styles.Topcontainer}>
-        <Text style={{ fontSize: 18, fontWeight: "bold", color: "Black" }}>
+        <Text style={{ fontSize: 18, fontWeight: "bold", color: "white" }}>
           {" "}
           Namal ! A practising Muslim{" "}
         </Text>
-        <StatusBar style="auto" />
+       
       </View>
 
       <ScrollView
@@ -86,7 +94,7 @@ export default function Dashboard({ navigation }) {
         showsHorizontalScrollIndicator={false}
         style={{
           flexDirection: "row",
-          backgroundColor: "#39A57D",
+          backgroundColor: "#871F78",
           margin: 5,
           borderRadius: 15,
         }}
@@ -209,16 +217,14 @@ export default function Dashboard({ navigation }) {
 
       <DuaCard
         image={require("../assets/dua.png")}
-        title={"ঈমান ঠিক রাখার দোয়া  "}
-        arabic={"يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلٰي دِيْنِكَ"}
-        //english={"Allahumma la sahla illama ja'altahu sahla, wa anta taj'aa lul hazna eja shi'ta sahla"}
-        bangla={"ইয়া মুক্বাল্লিবাল ক্বুলূব! সাব্বিত ক্বালবী ‘আলা দীনিকা"}
-        meaning={
-          "অর্থ: হে অন্তরসমূহের পরিবর্তনকারী! আপনি আমার অন্তরকে আপনার দ্বীনের (ইসলামের) উপর অটল রাখুন।"
-        }
-        reference={"সুনানে তিরমিযী, হাদিস নম্বর: ৩৫২২ "}
-        bgcolor={"lightblue"}
-        //  onPress={() => console.log("DuaCard9")}
+        title={randomDua.title}
+        arabic={randomDua.arabic}
+        bangla={randomAya.bangla}
+        reference={randomDua.reference}
+        bgcolor={"#BfF9E6"}
+        onPress={()=> navigation.navigate("DataList")}
+
+        
       />
 
       {/* <EventList listName={"Upcoming Event" } eventName={"Eid ul Fitr"} daysRemaining={43} day={5} month={"April"} /> */}
@@ -303,7 +309,6 @@ export default function Dashboard({ navigation }) {
 const styles = StyleSheet.create({
   Topcontainer: {
     flex: 1,
-    backgroundColor: "#7FCEAA",
     paddingTop: 40,
     justifyContent: "center",
     alignItems: "center",

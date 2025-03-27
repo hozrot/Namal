@@ -14,7 +14,7 @@ export default function DuaCard({ bgcolor, title,image, imageBack,arabic,bangla,
         borderWidth: 2,
         borderColor: "black",}}>
                 <ImageBackground  source={imageBack} style={{width: 'auto', height:'auto'}} resizeMode='contain'>
-                <BlurView intensity={100}>
+                {/* <BlurView intensity={100}> */}
                <View style={styles.header}>
               <Image
                  source={image}
@@ -63,7 +63,7 @@ export default function DuaCard({ bgcolor, title,image, imageBack,arabic,bangla,
 
 
                </View> */}
-</BlurView>
+{/* </BlurView> */}
 </ImageBackground>
              </View>
              

@@ -21,6 +21,7 @@ export default function ZikirList() {
         bangla={item.bangla}
         meaning={item.meaning}
         reference={item.reference}
+        bgcolor={"#BfF9E6"}
        
        />
         )}
